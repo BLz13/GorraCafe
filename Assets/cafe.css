@@ -1,4 +1,5 @@
 * {
+    font-family: 'Quicksand';
     margin: 0px;
     padding: 0px;
     animation-name: starting;
@@ -9,392 +10,297 @@
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
-@media (max-width: 454px){
-
-    body {
-        width: 100vw;
-        height: 100%;
-        grid-template-rows: 10vh auto 10vh;
-        background-color: #d6dbdfff;
-        font-family: 'Quicksand';
-        display: grid;
-        overflow-x: hidden;
-        justify-content: center;
-    }
-
-    .icon1 { /*small icons*/
-        width: 10%;
-        height: auto;
-    }
-
-    .icon2 { /*bigger icons*/
-        width: 15%;
-        height: auto;
-    }
-
-    /*nav menu starts*/
-
-    header {
-        z-index: 3;
-        grid-row: 1;
-        gap: 45%;
-        top: 0%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: #361307;
-        position: sticky;
-    }
-
-    #logoHome {
-        width: 40%;
-        height: 100%;
-        text-decoration: none;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-items: flex-start;
-        align-items: center;
-    }
-
-    #logoHome img {
-        height: 8vh;
-        width: auto;
-        transition: height 1s;
-    }
-
-    #logoHome img:hover {
-        height: 10vh;
-        width: auto;
-    }
-
-    h2 {
-        color: #E8E9EB;
-        text-align: right;
-        font-size: 7vw;
-    }
-
-    h2:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-
-    @keyframes hoveringText {
-        from {color: #E8E9EB;}
-        to {color: #D19C1D;}
-    }
-
-    /* pop up menu */
-
-    .dropMenu {
-        width: 7vw;
-        height: 30%;
-    }
-    
-    .dropMenu img {
-        width: 100%;
-        height: auto;
-    }
-
-    #dropButton {
-        top: 33%;
-        width: 7vw;
-        height: 36%;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-    }
-
-    #dropButton:hover #menu{
-        transform: translateX(50vw);
-        opacity: 1;
-    }
-
-    #menu {
-        width: 50vw;
-        height: 90vh;
-        top: 6.7vh;
-        left: -53vw;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        background-color: #240D05;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        gap: 55%;
-        transition: opacity 2s, transform 2s;
-    }
-
-    .sections {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        margin: 0vh 2vw;
-        gap: 5vh;
-    }
-
-    .buttonText{
-        color: #E8E9EB;
-        text-align: justify;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Quicksand';
-        height: 100%;
-        font-size: 4vw;
-    }
-
-    /* contact */
-
-    #formasContacto {
-        display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    #formasContacto li {
-        list-style-type: none;
-        flex: 1;
-        margin: 3.5% 0% 3% 0%;
-        max-height: 4vh;
-        max-width: 4vh;
-    }
-
-    #formasContacto li a img { /*contact icons*/
-        max-height: 4vh;
-        max-width: 4vh;
-    }
-
-    /* contact ends */
-
-    /* pop up menu ends */
-
-    /*nav menu ends*/
-
-    /* main contenten */
-
-    main{
-        padding: 1vh 4vw;
-        gap: 5vh;
-        grid-template-rows: repeat(15, auto);
-        display: grid;
-    }
-
-    h1{
-        margin-bottom: 2vh;
-        font-size: 6vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    h3{
-        margin-bottom: 2vh;
-        font-size: 6vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    h4{
-        margin-bottom: 2vh;
-        font-size: 5vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    h5{
-        margin: 2vh 0vh;
-        font-size: 4.5vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    p{
-        font-size: 3.7vw;
-        text-align: justify;
-    }
-
-    li{
-        font-size: 3.7vw;
-        margin: 2vh 0vw 2vh 3vw;
-        list-style: none;
-    }
-
-    #aboutUs{
-        grid-row: 1;
-    }
-
-    #coffeeShop{
-        grid-row: 2;
-    }
-
-    #introcoffee{
-        grid-row: 3;
-    }
-
-    #coffeeSpecies{
-        grid-row: 4;
-    }
-
-    /* table comparing */
-
-    #tableSpecies{
-        width: 90vw;
-        gap: 1vh;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    #tableSpecies li{
-        font-size: 3.7vw;
-        margin: 2vh 0vw 2vh 3vw;
-    }
-
-    /* table comparing ends */
-
-    #fruta{
-        grid-row: 5;
-    }
-
-    #handpick{
-        grid-row: 6;
-    }
-
-    #drying{
-        grid-row: 7;
-    }
-
-    #washedDrying{
-        grid-row: 8;
-    }
-
-    #greenBeans{
-        grid-row: 9;
-    }
-
-    #toasting{
-        grid-row: 10;
-    }
-
-    #toastedBeans{
-        grid-row: 11;
-    }
-
-    #toastedProces{
-        grid-row: 12;
-    }
-
-    #torrado{
-        grid-row: 13;
-    }
-
-    #barista{
-        grid-row: 14;
-    }
-
-    #baristaPics{
-        grid-row: 15;
-    }
-
-    /* polaroid style */
-
-    .imageGallery{
-        width: 100%;
-        gap: 2vw;
-        display: flex;
-        flex-flow: row nowrap;
-        overflow-x: scroll;
-        align-items: stretch;
-    }
-
-    .imageGallery .polaroid{
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 1vh 2vw;
-    }
-
-    .imageGallery .polaroid img{
-        max-width: 88.1vw;
-        height: auto;
-    }
-
-    .polaroid{
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 1vh 2vw 1vh 3vw;
-        max-width: 89vw;
-    }
-
-    .polaroid img{
-        max-width: 86vw;
-        height: auto;
-    }
-
-    .container p{
-        text-align: center;
-        text-transform: capitalize;
-        font-style: italic;
-    }
-
-    /* polaroid style ends */
-
-    /* main contenten ends */
-
-    /* footer */
-
-    footer {
-        z-index: 2;
-        grid-row: 3;
-        gap: 2%;
-        background-color: #E8E9EB;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        font-family:'Quicksand';
-    }
-
-    footer p{
-        text-align: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        color: #361307;
-        font-weight: lighter;
-        text-transform: uppercase;
-        gap: 5%;
-    }
-
-    #copyright {
-        grid-row: 1;
-        grid-column: 1;
-        font-size: 3vw;
-    }
-
-    #phone {
-        grid-row: 1;
-        grid-column: 2;
-        font-size: 3vw;
-    }
-
-    #slogan {
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        font-size: 4.5vw;
-    }
-
-    /* footer ends */
-
+       
+body {
+    display: grid;
+    grid-template-rows: 10vh auto 10vh;
 }
+
+.icon1 { /*small icons*/
+    width: 20px;
+    height: auto;
+}
+
+/*nav menu starts*/
+
+#navbar {
+    z-index: 3;
+    grid-row: 1;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+    padding-left: 10px;
+    background-color: #361307;
+    position: sticky;
+}
+
+#logoHome {
+    width: 40%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+#logoHome img {
+    height: 8vh;
+    width: auto;
+    transition: height 1s;
+}
+
+#logoHome img:hover {
+    height: 10vh;
+    width: auto;
+}
+
+h2 {
+    color: #E8E9EB;
+    text-align: right;
+    font-size: 7vw;
+}
+
+h2:hover {
+    animation-name: hoveringText;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes hoveringText {
+    from {color: #E8E9EB;}
+    to {color: #D19C1D;}
+}
+
+/* pop up menu */
+
+.dropMenu {
+    width: 7vw;
+    height: 30%;
+}
+
+.dropMenu img {
+    width: 25px;
+    height: auto;
+}
+
+#dropButton {
+    top: 33%;
+    width: 7vw;
+    height: 36%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+#dropButton:hover #menu{
+    transform: translateX(200px);
+    opacity: 1;
+}
+
+#menu {
+    width: 50vw;
+    height: 90vh;
+    top: 62px;
+    left: -218px;
+    opacity: 0;
+    gap: 65%;
+    padding-top: 2vh;
+    overflow: hidden;
+    position: absolute;
+    background-color: #240D05;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: opacity 2s, transform 2s;
+}
+
+.sections {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 10px;
+    margin: 0vh 3vw;
+    gap: 5vh;
+}
+
+.buttonText{
+    color: #E8E9EB;
+    text-align: justify;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    height: 100%;
+    font-size: 4vw;
+}
+
+.buttonText:hover {
+    animation-name: hoveringText;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+/* contact */
+
+#formasContacto {
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding-left: 20px;
+}
+
+#formasContacto li {
+    list-style-type: none;
+}
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 35px;
+    min-width: 30px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/*nav menu ends*/
+
+/* footer */
+
+footer {
+    grid-row: 3;
+    z-index: 2;
+    column-gap: 10%;
+    font-size: 80%;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    background-color: #E8E9EB;
+    overflow: hidden;
+    display: grid;
+}
+
+footer p{
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color: #240D05;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family:'Quicksand';
+    padding-top: 5%;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+#copyright {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#phone {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#slogan {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    font-size: 100%;
+}
+
+/* footer ends */
+
+/* main contenten */
+
+h1{
+    font-size: 6vw;
+    color: #240D05;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+h3{
+    font-size: 6vw;
+    color: #240D05;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+h4{
+    font-size: 5vw;
+    color: #240D05;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+h5{
+    font-size: 4.5vw;
+    color: #240D05;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+main p{
+    font-size: 3.7vw;
+    text-align: justify;
+}
+
+li{
+    font-size: 3.7vw;
+    list-style: none;
+}
+
+.black-caption{
+    text-align: center !important;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px #E8E9EB;
+    color: #000000;
+}
+
+.white-caption{
+    text-align: center !important;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px #000000;
+    color: #E8E9EB;
+}
+
+/* polaroid style */
+
+.polaroid{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2vh 3vw;
+}
+
+.polaroid img{
+    max-width: 86vw;
+    height: auto;
+}
+
+.container p{
+    text-align: center;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+/* polaroid style ends */
+
+/* main contenten ends */
+
 
 @media (min-width: 454px) and (max-width:  1280px){
 

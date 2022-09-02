@@ -11,6 +11,8 @@
             <meta name="keywords" content="cafe, panaderia, libre-de-gluten, sin-tacc, suscripcion, tostadores">
             <meta name="author" content="Bruno Lazo">
             <link rel="stylesheet" href="../Assets/cafe.css">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
@@ -23,19 +25,19 @@
         </head>
 
         <body>
-            <header>
+            <header id="navbar" class="d-flex flex-row flex-nowrap justify-content-between align-items-center">
                 <div class="dropMenu">
                     <div id="dropButton">
                         <div id="menu">
                             <ul class="sections">
                                     <li>
-                                    <a class="buttonText" href="../Pages/cafe.html" target="_self">sobre nosotros y el café</a>
+                                    <a class="buttonText" href="./cafe.html" target="_self">sobre nosotros y el café</a>
                                 </li>
                                 <li>
-                                    <a class="buttonText" href="../Pages/carta.html" target="_self">nuestra carta</a>
+                                    <a class="buttonText" href="./carta.html" target="_self">nuestra carta</a>
                                 </li>
                                 <li>
-                                    <a class="buttonText" href="../Pages/suscripcion.html" target="_self">suscripcion</a>
+                                    <a class="buttonText" href="./suscripcion.html" target="_self">suscripcion</a>
                                 </li>
                             </ul>
                             <ul id="formasContacto">
@@ -58,144 +60,194 @@
                         </div>
                     </div>
                     <img src="../Images/Menu.png" alt="Menu">
-                </div>
+                </div class="dropMenu">
                 <a id="logoHome" href="../index.html" target="_self">
-                    <h2>Gorra Café</h2>
+                    <h2>Gorra<br>Café</h2>
                     <img src="../Images/LogoHome.png" alt="Home">
                 </a>
             </header>
-            <main>
-                <section id="aboutUs">
-                    <h1>Sobre nosotros:</h1>
-                    <p> Ubicados a metros del complejo universitario, te ofrecemos un lugar cómodo y relajante para que vengas a realizar tareas grupales. Si bien hay una zona en la cual está permitido establecerse sin la necesidad de comprar nada, también ofrecemos el más rico café de especialidad, además toda nuestra carta es libre de gluten.</p>
+            <main class="container-fluid px-0">
+                <section class="row px-0 mx-0 my-5 gy-3 justify-content-center">
+                    <h1 class="px-0 mx-0 col-11">Sobre nosotros:</h1>
+                    <p class="px-0 mx-0 col-11"> Ubicados a metros del complejo universitario, te ofrecemos un lugar cómodo y relajante para que vengas a realizar tareas grupales. Si bien hay una zona en la cual está permitido establecerse sin la necesidad de comprar nada, también ofrecemos el más rico café de especialidad, además toda nuestra carta es libre de gluten.</p>
+                    <div class="mx-0 polaroid carousel slide carousel-fade col-11" data-bs-interval="10000" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../Images/coffeeShop5.jpg" class="d-block w-100" alt="Coffee Shop">
+                                <div class="carousel-caption d-block">
+                                    <p class="black-caption">Si estás apurado, pedí directo desde la ventana</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/coffeeShop1.jpg" class="d-block w-100" alt="Coffee Shop">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Trabaja tranquilo, con Wi-Fi de alta velocidad</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/coffeeShop2.jpg" class="d-block w-100" alt="Coffee Shop">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Un ambiente atractivo y tranquilo</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/coffeeShop3.jpg" class="d-block w-100" alt="Coffee Shop">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Sentate y disfruta en la barra, pero cuidado con los baristas charlan hasta por los codos</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/coffeeShop4.jpg" class="d-block w-100" alt="Coffee Shop">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Disfruta el más rico café, también para llevar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </section>
-                <div class="imageGallery" id="coffeeShop">
-                    <div class="polaroid">
-                        <img src="../Images/coffeeShop5.jpg" alt="Coffee Shop">
-                        <div class="container">
-                            <p>Si estás apurado, pedí directo desde la ventana</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/coffeeShop1.jpg" alt="Coffee Shop">
-                        <div class="container">
-                            <p>Trabaja tranquilo, con Wi-Fi de alta velocidad</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/coffeeShop2.jpg" alt="Coffee Shop">
-                        <div class="container">
-                            <p>Un ambiente atractivo y tranquilo</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/coffeeShop3.jpg" alt="Coffee Shop">
-                        <div class="container">
-                            <p>Sentate y disfruta en la barra, pero cuidado con los baristas charlan hasta por los codos</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/coffeeShop4.jpg" alt="Coffee Shop">
-                        <div class="container">
-                            <p>Disfruta el más rico café, también para llevar</p>
-                        </div>
-                    </div>
-                </div>
-                <section id="introcoffee">
-                    <h3>un poco sobre el café de especialidad:</h3>
-                    <p>   El proceso de preparado de café desde la planta hasta la taza es muy complejo y extenso, a continuación le damos una pequeña introducción a los curiosos. Lo primero que tenemos para decir es que no trabajamos lo que se conoce comúnmente como café "comercial", ya que este tiende a ser de peor calidad, lo que hacemos, en cambio, es comprar café verde y tostarlo nosotros. Para saber por qué vas a tener que seguir leyendo.
-                    <br>
-                    <br>
-                    Por lo general en las cafeterías comerciales más grandes, se trabaja una variedad de la planta de café conocida como Robusta, nosotros por varios motivos trabajamos exclusivamente con café Arábica, a continuación te explicamos las principales diferencias entre estas dos variedades.</p>
-                </section>
-                <section id="coffeeSpecies">
-                    <h4>Variedades de café</h4>
-                    <p>A nuestro entender, el problema más grande al intentar usar café Robusta es su cultivo, ya que, al estar cultivado entre los 200 y 800 metros sobre el nivel del mar, este permite ser cultivado con maquinaria, lo cual hace que muchas veces el fruto no este completamente maduro antes de ser extraído, lo que puede alterar gravemente el sabor final en la taza.<br>A diferencia del café Robusta, el café Arábica, se cultiva en alturas superiores a los 1000 metros de altura y en zonas con climas muy específicos, además la planta es mucho más delicada (en comparación a la planta de Robusta) no se usan pesticidas y la recolección es hecha completamente a mano por recolectores especializados que saben cuando los frutos están maduros para ser extraídos y como extraerlos sin dañar la planta.<br><br>A continuación te dejamos un cuadro con las principales diferencias entre estas variedades a modo de resumen:</p>    
-                    <section id="tableSpecies">
-                        <h5 id="title1">Robusta:</h5>
-                        <p id="oneOne">> Su cultivo es entre los 200 y 800 mts sobre el nivel del mar</p>
-                        <p id="oneTwo">> No se seleccionan específicamente los frutos</p>
-                        <p id="oneThree">> Tiene mayor cantidad de cafeína por grano</p>
-                        <p id="oneFour">> Tiene sabores y olores más insípidos</p>
-                        <p id="oneFive">> Menor precio de infraestructura</p>
-                        <p id="oneSix">> El grano es mas redondito y la veta que cruza es mas recta</p>
-                        <h5 id="title2">Arábica:</h5>
-                        <p id="twoOne">> Su cultivo es a partir de los 1000 mts sobre el nivel del mar</p>
-                        <p id="twoTwo">> Se extrae de la planta a mano y se espera específicamente a que el fruto esté maduro, ni verde, ni pasado.</p>
-                        <p id="twoThree">> Tiene aproximadamente la mitad de la cafeína de un grano Robusta</p>
-                        <p id="twoFour">> Sus sabores son más variados, se asemeja a las notas de un vino, puede variar en dulzor, acides o incluso distintos sabores</p>
-                        <p id="twoFive">> Mayor precio</p>
-                        <p id="twoSix">> El grano es mas ovalado y la veta que cruza tiene forma de "S"</p>
+                <section class="row px-0 mx-0 my-5 gy-3 justify-content-center">
+                    <h3 class="px-0 mx-0 col-11">un poco sobre el café de especialidad:</h3>
+                    <p class="px-0 mx-0 col-11">El proceso de preparado de café desde la planta hasta la taza es muy complejo y extenso, a continuación le damos una pequeña introducción a los curiosos. Lo primero que tenemos para decir es que no trabajamos lo que se conoce comúnmente como café "comercial", ya que este tiende a ser de peor calidad, lo que hacemos, en cambio, es comprar café verde y tostarlo nosotros. Para saber por qué vas a tener que seguir leyendo.<br><br>Por lo general en las cafeterías comerciales más grandes, se trabaja una variedad de la planta de café conocida como Robusta, nosotros por varios motivos trabajamos exclusivamente con café Arábica, a continuación te explicamos las principales diferencias entre estas dos variedades.</p>
+                    <h4 class="px-0 mx-0 col-11">Variedades de café</h4>
+                    <p class="px-0 mx-0 col-11">A nuestro entender, el problema más grande al intentar usar café Robusta es su cultivo, ya que, al estar cultivado entre los 200 y 800 metros sobre el nivel del mar, este permite ser cultivado con maquinaria, lo cual hace que muchas veces el fruto no este completamente maduro antes de ser extraído, lo que puede alterar gravemente el sabor final en la taza.<br>A diferencia del café Robusta, el café Arábica, se cultiva en alturas superiores a los 1000 metros de altura y en zonas con climas muy específicos, además la planta es mucho más delicada (en comparación a la planta de Robusta) no se usan pesticidas y la recolección es hecha completamente a mano por recolectores especializados que saben cuando los frutos están maduros para ser extraídos y como extraerlos sin dañar la planta.<br><br>A continuación te dejamos un cuadro con las principales diferencias entre estas variedades a modo de resumen:</p>    
+                    <section class="row">
+                        <section class="col-12">
+                            <h5>Robusta:</h5>
+                            <p>> Su cultivo es entre los 200 y 800 mts sobre el nivel del mar</p>
+                            <p>> No se seleccionan específicamente los frutos</p>
+                            <p>> Tiene mayor cantidad de cafeína por grano</p>
+                            <p>> Tiene sabores y olores más insípidos</p>
+                            <p>> Menor precio de infraestructura</p>
+                            <p>> El grano es mas redondito y la veta que cruza es mas recta</p>
+                        </section>
+                        <section class="col-12">
+                            <h5>Arábica:</h5>
+                            <p>> Su cultivo es a partir de los 1000 mts sobre el nivel del mar</p>
+                            <p>> Se extrae de la planta a mano y se espera específicamente a que el fruto esté maduro, ni verde, ni pasado.</p>
+                            <p>> Tiene aproximadamente la mitad de la cafeína de un grano Robusta</p>
+                            <p>> Sus sabores son más variados, se asemeja a las notas de un vino, puede variar en dulzor, acides o incluso distintos sabores</p>
+                            <p>> Mayor precio</p>
+                            <p>> El grano es mas ovalado y la veta que cruza tiene forma de "S"</p>
+                        </section>
                     </section>
+                    <div class="mx-0 polaroid carousel slide carousel-fade col-11" data-bs-interval="10000" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../Images/frutaCafe1.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Planta de café, con fruta en varios puntos de maduración</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/frutaCafe2.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Fruto de café</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/frutaCafe3.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Frutos de café maduros</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/frutaCafe4.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Ejemplo de café Robusta siendo recolectado</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/frutaCafe5.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Planta de café</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/frutaCafe6.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Frutos de café maduros</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="mx-0 polaroid carousel slide carousel-fade col-11" data-bs-interval="10000" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../Images/handpick1.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Muestra de recolección de Arabica</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/handpick2.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Fruto siendo recolectado a mano</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/handpick3.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Ejemplo de recolección de Arabica</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/separado.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Separación a mano de frutos y granos en mal estado</p>
+                                </div>
+                            </div>
+                        </div>
+                    <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
                 </section>
-                <div class="imageGallery" id="fruta">
-                    <div class="polaroid">
-                        <img src="../Images/frutaCafe1.jpg" alt="">
-                        <div class="container">
-                            <p>Planta de café, con fruta en varios puntos de maduración</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/frutaCafe2.jpg" alt="">
-                        <div class="container">
-                            <p>Fruto de café</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/frutaCafe3.jpg" alt="">
-                        <div class="container">
-                            <p>Frutos de café maduros</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/frutaCafe4.jpg" alt="">
-                        <div class="container">
-                            <p>Ejemplo de café Robusta siendo recolectado</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/frutaCafe5.jpg" alt="">
-                        <div class="container">
-                            <p>Planta de café</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/frutaCafe6.jpg" alt="">
-                        <div class="container">
-                            <p>Frutos de café maduros</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="imageGallery" id="handpick">
-                    <div class="polaroid">
-                        <img src="../Images/handpick1.jpg" alt="">
-                        <div class="container">
-                            <p>Muestra de recolección de Arabica</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/handpick2.jpg" alt="">
-                        <div class="container">
-                            <p>Fruto siendo recolectado a mano</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/handpick3.jpg" alt="">
-                        <div class="container">
-                            <p>Ejemplo de recolección de Arabica</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/separado.jpg" alt="">
-                        <div class="container">
-                            <p>Separación a mano de frutos y granos en mal estado</p>
-                        </div>
-                    </div>
-                </div>
-                <section id="drying">
-                    <h4>Métodos de secado</h4>
-                    <p>Ahora que conoces un poco más sobre las variedades entre estas dos especies distintas de plantas de café te vamos a contar acerca de un proceso muy importante, el cual no muchos conocen: el secado del grano. Una vez hecha la colecta del fruto, toca secar el grano, si bien hay varios tipos de técnicas de secado lo que debes saber es que este proceso altera de forma profunda el café. Los tres tipos más comunes de secado son:</p>
-                    <ul id="dryingTypes">
+                <section class="row px-0 mx-0 my-5 gy-3 justify-content-center">
+                    <h4 class="px-0 mx-0 col-11">Métodos de secado</h4>
+                    <p class="px-0 mx-0 col-11">Ahora que conoces un poco más sobre las variedades entre estas dos especies distintas de plantas de café te vamos a contar acerca de un proceso muy importante, el cual no muchos conocen: el secado del grano. Una vez hecha la colecta del fruto, toca secar el grano, si bien hay varios tipos de técnicas de secado lo que debes saber es que este proceso altera de forma profunda el café. Los tres tipos más comunes de secado son:</p>
+                    <ul class="px-0 mx-0 col-11">
                         <li>
                             > Secado natural: en este proceso el grano de café se deja secar dentro del fruto, lo cual hace que este fermente levemente, por lo cual el resultado final en taza suele ser de acidez baja, mucho sabor a fruta y sabores más exóticos.
                         </li>
@@ -206,96 +258,136 @@
                             > Secado "Honey": este proceso es muy similar al anterior con la diferencia que se remueve la pula exterior y únicamente se deja una especie de miel que se encuentra entre el grano y la pulpa y tiende a tener características en común con ambos procesos anteriores.
                         </li>
                     </ul>
+                    <div class="polaroid col-11">
+                        <img src="../Images/secadoLavado.jpg" alt="">
+                        <div class="container">
+                            <p>Secado del grano de tipo “lavado”</p>
+                        </div>
+                    </div>
                 </section>
-                <div id="washedDrying" class="polaroid">
-                    <img src="../Images/secadoLavado.jpg" alt="">
-                    <div class="container">
-                        <p>Secado del grano de tipo “lavado”</p>
+                <div class="row px-0 mx-0 my-5 gy-3 justify-content-center">
+                    <div class="mx-0 polaroid col-11 carousel slide carousel-fade align-self-center" data-bs-interval="10000" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../Images/granoVerde1.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Granos de Arabica previo al tueste</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                            <img src="../Images/granoVerde2.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Granos de Arabica previo al tueste</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-                <div class="imageGallery" id="greenBeans">
-                    <div class="polaroid">
-                            <img src="../Images/granoVerde1.jpg" alt="">
-                        <div class="container">
-                            <p>Granos de Arabica previo al tueste</p>
+                <section class="row px-0 mx-0 my-5 gy-3 justify-content-center">
+                    <h4 class="px-0 mx-0 col-11">Tostando el grano:</h4>
+                    <p class="px-0 mx-0 col-11">Una vez finalizado el proceso de secado, que puede demorar entre 15 días y 2 meses, el café se exporta verde para luego ser tostado por especialistas en esta materia y así obtener la mejor calidad posible de los granos. Aquí tenemos que hacer una declaración de guerra, existe un tipo de café tostado llamado café torrado, el cual es sin lugar a duda el peor café que se puede consumir, además en la mayoría de los países este se encuentra prohibido por ley debido a sus altas cantidades de azúcar. El café torrado es café que se tuesta con azúcar, el problema de esto es que no solo arruina el gusto del café, sino que es cancerígeno y por ende peligroso para la salud.<br>El proceso de secado es muy delicado y variado y se tuesta en cantidades pequeñas, además por lo general se usan curvas de calor, y la temperatura no se eleva demasiado, mientras los granos se van rotando y mezclando para asegurar que el tostado es correcto tanto en el grano en sí como en toda la bacha de tueste, y así asegurar el correcto balance de sabores.</p>
+                    <div class="mx-0 polaroid col-11 carousel slide carousel-fade align-self-center" data-bs-interval="10000" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/granoVerde2.jpg" alt="">
-                        <div class="container">
-                            <p>Granos de Arabica previo al tueste</p>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../Images/ganoArabica1.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="black-caption">Grano de café Arabica</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/ganoArabica2.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="white-caption">Grano Arabica donde se nota la forma de “S”</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/ganoRobusta.jpg" class="d-block w-100">
+                                <div class="carousel-caption d-block">
+                                    <p class="black-caption">Grano de café Robusta</p>
+                                </div>
+                            </div>
                         </div>
+                        <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                </div>
-                <section id="toasting">
-                    <h4>Tostando el grano:</h4>
-                    <p>Una vez finalizado el proceso de secado, que puede demorar entre 15 días y 2 meses, el café se exporta verde para luego ser tostado por especialistas en esta materia y así obtener la mejor calidad posible de los granos. Aquí tenemos que hacer una declaración de guerra, existe un tipo de café tostado llamado café torrado, el cual es sin lugar a duda el peor café que se puede consumir, además en la mayoría de los países este se encuentra prohibido por ley debido a sus altas cantidades de azúcar. El café torrado es café que se tuesta con azúcar, el problema de esto es que no solo arruina el gusto del café, sino que es cancerígeno y por ende peligroso para la salud.
-                    <br>
-                    El proceso de secado es muy delicado y variado y se tuesta en cantidades pequeñas, además por lo general se usan curvas de calor, y la temperatura no se eleva demasiado, mientras los granos se van rotando y mezclando para asegurar que el tostado es correcto tanto en el grano en sí como en toda la bacha de tueste, y así asegurar el correcto balance de sabores.</p>
                 </section>
-                <div class="imageGallery" id="toastedBeans">
-                    <div class="polaroid">
-                        <img src="../Images/ganoArabica1.jpg" alt="">
+                <div class="row px-0 mx-0 my-5 gy-3 justify-content-center">
+                    <div class="col-11 polaroid">    
+                        <img src="../Images/tostado.jpg" alt="">
                         <div class="container">
-                            <p>Grano de café Arabica</p>
+                            <p>Proceso de tostado</p>
                         </div>
                     </div>
-                    <div class="polaroid">
-                        <img src="../Images/ganoArabica2.jpg" alt="">
+                    <div class="col-11 polaroid">
+                        <img src="../Images/ganoTorrado.jpg" alt="">
                         <div class="container">
-                            <p>Grano Arabica donde se nota la forma de “S”</p>
-                        </div>
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/ganoRobusta.jpg" alt="">
-                        <div class="container">
-                            <p>Grano de café Robusta</p>
+                            <p>Granos de café torrado</p>
                         </div>
                     </div>
                 </div>
-                <div id="toastedProces" class="polaroid">    
-                    <img src="../Images/tostado.jpg" alt="">
-                    <div class="container">
-                        <p>Proceso de tostado</p>
+                <section class="row px-0 mx-0 my-5 gy-3 justify-content-center">
+                    <h4 class="px-0 mx-0 col-11">En manos del barista:</h4>
+                    <p class="px-0 mx-0 col-11">Bueno, finalmente el café llego a manos del barista, ya está tostado y descansado, ya que, un subproceso del tostado es la liberación de CO2 (dióxido de carbono) de parte del café, entonces hay que dejarlo descansar un tiempo determinado luego del tostado para asegurar su correcta extracción luego.<br>Ya casi llegamos al final del corrido, ahora toca moler el café, lo cual cambia dependiendo de cada café, luego se prepara el famoso “puck” y por último se prepara el shot de café dependiendo de la receta utilizada. Ese es todo el camino del café, desde la semilla a la taza, sin embargo, hay otro elemento muy importante: la leche.<br>Para muchos, infaltable, el acompañamiento ideal para un rico café, por eso también hace falta cuidarlo. La leche de mamíferos presenta azúcares de manera natural, quizá lo oíste alguna vez: la lactosa, este azúcar le da a la leche un sabor dulce, que se amplifica si calentamos la leche hasta una temperatura máxima de 70 Celsius, es por eso que quizá en varias cafeterías de especialidad sentiste que el café estaba “frío”, ya que él la leche solo se calienta hasta los 65 grados.<br>Eso fue todo, ahora sabes un poquito más sobre la bebida más consumida a nivel global y que tanto nos apasiona, gracias, te esperamos!!</p>
+                    <div class="mx-0 polaroid carousel slide carousel-fade col-11" data-bs-interval="10000" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../Images/barista1.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/barista2.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/barista3.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../Images/barista4.jpg" class="d-block w-100">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                </div>
-                <div id="torrado" class="polaroid">
-                    <img src="../Images/ganoTorrado.jpg" alt="">
-                    <div class="container">
-                        <p>Granos de café torrado</p>
-                    </div>
-                </div>
-                <section id="barista">
-                    <h4>En manos del barista:</h4>
-                    <p>Bueno, finalmente el café llego a manos del barista, ya está tostado y descansado, ya que, un subproceso del tostado es la liberación de CO2 (dióxido de carbono) de parte del café, entonces hay que dejarlo descansar un tiempo determinado luego del tostado para asegurar su correcta extracción luego.
-                    <br>
-                    Ya casi llegamos al final del corrido, ahora toca moler el café, lo cual cambia dependiendo de cada café, luego se prepara el famoso “puck” y por último se prepara el shot de café dependiendo de la receta utilizada. Ese es todo el camino del café, desde la semilla a la taza,
-                    sin embargo, hay otro elemento muy importante: la leche.
-                    <br>
-                    Para muchos, infaltable, el acompañamiento ideal para un rico café, por eso también hace falta cuidarlo. La leche de mamíferos presenta azúcares de manera natural, quizá lo oíste alguna vez: la lactosa, este azúcar le da a la leche un sabor dulce, que se amplifica si calentamos la leche hasta una temperatura máxima de 70 Celsius, es por eso que quizá en varias cafeterías de especialidad sentiste que el café estaba “frío”, ya que él la leche solo se calienta hasta los 65 grados.
-                    <br>
-                    Eso fue todo, ahora sabes un poquito más sobre la bebida más consumida a nivel global y que tanto nos apasiona, gracias, te esperamos!!</p>
                 </section>
-                <div class="imageGallery" id="baristaPics">
-                    <div class="polaroid">
-                        <img src="../Images/barista1.jpg" alt="Barista">
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/barista2.jpg" alt="Barista">
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/barista3.jpg" alt="Barista">
-                    </div>
-                    <div class="polaroid">
-                        <img src="../Images/barista4.jpg" alt="Barista">
-                    </div>
-                </div>
             </main>
             <footer>
                 <p id="copyright">© 2022<img class="icon1" src="../Images/GorraCafe2.0.png" alt="Home"> Gorra Café</p>
                 <p id="phone"><img class="icon1" src="../Images/TelefonoCafe.png">+54 223 510 2714</p>
                 <p id="slogan">have a cap of joe</p>
             </footer>
-            </body>
+        </body>
 
     </html>
