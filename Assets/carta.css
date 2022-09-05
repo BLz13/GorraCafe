@@ -1,18 +1,16 @@
 * {
-    font-family: 'Quicksand';
     margin: 0px;
     padding: 0px;
-    animation-name: starting;
     animation-duration: 2s;
+    animation-name: starting;
 }
 
 @keyframes starting{
     from {opacity: 0;}
     to {opacity: 1;}
 }
-       
+
 body {
-    overflow-x: hidden;
     display: grid;
     grid-template-rows: 10vh auto 10vh;
 }
@@ -83,8 +81,8 @@ h2:hover {
 }
 
 .dropMenu img {
-    width: 25px;
-    height: auto;
+    max-width: 100%;
+    height: 100%;
 }
 
 #dropButton {
@@ -97,17 +95,17 @@ h2:hover {
 }
 
 #dropButton:hover #menu{
-    transform: translateX(200px);
+    transform: translateX(47vw);
     opacity: 1;
 }
 
 #menu {
     width: 50vw;
     height: 90vh;
-    top: 62px;
-    left: -218px;
+    top: 6.7vh;
+    left: -50vw;
     opacity: 0;
-    gap: 65%;
+    gap: 50%;
     padding-top: 2vh;
     overflow: hidden;
     position: absolute;
@@ -125,7 +123,7 @@ h2:hover {
     justify-content: space-between;
     list-style: none;
     padding-left: 10px;
-    margin: 0vh 3vw;
+    margin: 0vh 30px;
     gap: 5vh;
 }
 
@@ -152,10 +150,9 @@ h2:hover {
 #formasContacto {
     display: flex;
     flex-flow: row wrap ;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-    padding-left: 20px;
+    justify-content: space-evenly;
+    padding: 0px 30px 0px 40px;
+    column-gap: 3vw;
 }
 
 #formasContacto li {
@@ -164,7 +161,7 @@ h2:hover {
 
 #formasContacto li a img { /*contact icons*/
     max-height: 35px;
-    min-width: 30px;
+    min-width: 35px;
 }
 
 /* contact ends */
@@ -178,7 +175,7 @@ h2:hover {
 footer {
     grid-row: 3;
     z-index: 2;
-    column-gap: 10%;
+    column-gap: 2%;
     font-size: 80%;
     width: 100vw;
     grid-template-columns: repeat(2, 1fr);
@@ -246,7 +243,7 @@ footer p{
 }
 
 .footNotes{
-    font-size: 3vw;
+    font-size: 80%;
     font-weight: lighter;
     text-align: justify; 
 }
@@ -281,539 +278,64 @@ h1{
 
 /* main content ends*/
 
-@media (min-width: 454px) and (max-width:  1280px){
-
-    body {
-        width: 100vw;
-        height: 100%;
-        grid-template-rows: 10vh auto 10vh;
-        background-color: #d6dbdfff;
-        font-family: 'Quicksand';
-        display: grid;
-        overflow-x: hidden;
-        justify-content: center;
-    }
-
-    .icon1 { /*small icons*/
-        width: 5%;
-        height: auto;
-    }
-
-    .icon2 { /*bigger icons*/
-        width: 15%;
-        height: auto;
-    }
-
-    /*nav menu starts*/
-
-    header {
-        z-index: 3;
-        grid-row: 1;
-        gap: 75%;
-        top: 0%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #361307;
-        position: sticky;
-    }
-
-    #logoHome {
-        width: 40%;
-        height: 100%;
-        text-decoration: none;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-items: flex-start;
-        align-items: center;
-    }
-
-    #logoHome img {
-        height: 8vh;
-        width: auto;
-        transition: height 1s;
-    }
-
-    #logoHome img:hover {
-        height: 10vh;
-        width: auto;
-    }
-
-    h2 {
-        color: #E8E9EB;
-        text-align: right;
-        font-size: 4vh;
-    }
-
-    h2:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-
-    @keyframes hoveringText {
-        from {color: #E8E9EB;}
-        to {color: #D19C1D;}
-    }
-
-    /* pop up menu */
-
-    .dropMenu {
-        margin-left: 5vh;
-        width: 6vw;
-        height: 3vw;
-    }
+@media (min-width: 576px){
     
-    .dropMenu img {
-        width: 100%;
-        height: auto;
-    }
+    main{
 
-    #dropButton {
-        width: 3vw;
-        height: 3vw;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-    }
-
-    #dropButton:hover #menu{
-        transform: translateX(50vw);
-        opacity: 1;
-    }
-
-    #menu {
-        width: 30vw;
-        height: 90vh;
-        top: 7vh;
-        left: -54vw;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        background-color: #240D05;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        gap: 60%;
-        transition: opacity 2s, transform 2s;
-    }
-
-    .sections {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        list-style: none;
-        margin: 0vh 3vw;
-        gap: 5vh;
-    }
-
-    .buttonText{
-        color: #E8E9EB;
-        text-align: justify;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Quicksand';
-        height: 100%;
-        font-size: 2vh;
-    }
-
-    .buttonText:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-
-    /* contact */
-
-    #formasContacto {
-        display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    #formasContacto li {
-        list-style-type: none;
-        flex: 1;
-        margin: 3.5% 0% 3% 0%;
-        max-height: 4vh;
-        max-width: 4vh;
-    }
-
-    #formasContacto li a img { /*contact icons*/
-        max-height: 4vh;
-        max-width: 4vh;
-    }
-
-    /* contact ends */
-
-    /* pop up menu ends */
-
-    /*nav menu ends*/
-
-    /* main content */
-
-    .laCarta {
-        font-family: 'Quicksand';
-        text-align: center;
-        display: grid;
-        grid-row: 2;
-        row-gap: 2vh;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: 20vh 30vh repeat(2, auto) 30vh repeat(2, auto) 30vh repeat(2, auto) 30vh repeat(3, auto);
-    }
-
-    .titles{
-        height: 24vh;
-        padding-top: 6vh;
-        padding-right: 5vw;
-        font-size: 5vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        padding-top: 0vh;
+        border-radius: 10px;
         border-top: 0.15vh solid #000000;
         border-bottom: 0.15vh solid #000000;
-        background-color: white;
-        background-size: cover;
-        text-align: right;
-        font-family: 'Neonderthaw';
-        font-weight: normal;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+        border-left: 0.15vw solid #000000;
+        border-right: 0.15vw solid #000000;
+        
     }
-
-    .items{
-        list-style: none;
-        padding-top: 5vh;
-        font-size: 1.7vw;
-    }
-
-    .footNotes{
-        height: 2vh;
-        padding: 0% 2vw;
-        font-size: 1.2vw;
-        font-weight: lighter;
-        text-align: justify; 
-    }
-
-    h1{
-        height: 10vh;
-        grid-row: 1;
-        grid-column: 1 / span 2;
-        font-size: 6vw;
-        text-shadow: 0 0 3px #E8E9EB;
-        color: black;
-        font-weight: normal;
-        align-self: center;
-        font-family: 'Neonderthaw';
-    }
-
-    #titleCoffee{
-        padding-left: 6vw;
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuCoffee2.png);
-        background-size: 120%;
-        text-align: center;
-
-    }
-
-    #coffee{
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-    #pricesCoffee{
-        grid-row: 3;
-        grid-column: 2;
-    }
-
-    #footCoffee{
-        grid-row: 4;
-        grid-column: 1 / span 2;    
-    }
-
-    #titleDrinks{
-        grid-row: 5;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuDrink2.png);
-    }
-
-    #drinks{
-        grid-row: 6;
-        grid-column: 1;
-    }
-
-    #pricesDrinks{
-        grid-row: 6;
-        grid-column: 2;
-    }
-
-    #titleSweet{
-        grid-row: 8;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuSweet2.png);
-    }
-
-    #sweet{
-        grid-row: 9;
-        grid-column: 1;
-    }
-
-    #pricesSweet{
-        grid-row: 9;
-        grid-column: 2;
-    }
-
-    #titleSalt{
-        padding-left: 6vw;
-        grid-row: 11;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuSalt2.png);
-        background-position: bottom;
-        text-align: center;
-    }
-
-    #salt{
-        grid-row: 12;
-        grid-column: 1;
-    }
-
-    #pricesSalt{
-        grid-row: 12;
-        grid-column: 2;
-    }
-
-    #footSalt{
-        grid-row: 13;
-        grid-column: 1 / span 2;    
-    }
-
-    /* main content ends*/
-
-    /* footer */
-
-    footer {
-        z-index: 2;
-        grid-row: 3;
-        gap: 2%;
-        background-color: #E8E9EB;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        font-family:'Quicksand';
-    }
-
-    footer p{
-        text-align: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        color: #361307;
-        font-weight: lighter;
-        text-transform: uppercase;
-        gap: 2%;
-    }
-
-    #copyright {
-        grid-row: 1;
-        grid-column: 1;
-        font-size: 1vw;
-    }
-
-    #phone {
-        grid-row: 1;
-        grid-column: 2;
-        font-size: 1vw;
-    }
-
-    #slogan {
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        font-size: 1.5vw;
-    }
-
-    /* footer ends */   
-    
 }
 
-@media (min-width: 1280px){
-
-    body {
-        width: 100vw;
-        height: 100%;
-        grid-template-rows: 10vh auto 10vh;
-        background-color: #d6dbdfff;
-        font-family: 'Quicksand';
-        display: grid;
-        overflow-x: hidden;
-        justify-content: center;
-    }
-
-    .icon1 { /*small icons*/
-        width: 3%;
-        height: auto;
-    }
-
-    .icon2 { /*bigger icons*/
-        width: 15%;
-        height: auto;
-    }
+@media (min-width: 576px) and (max-width: 768px){
 
     /*nav menu starts*/
 
-    header {
-        width: 100vw;
-        z-index: 3;
-        grid-row: 1;
-        gap: 75%;
-        top: 0%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #361307;
-        position: sticky;
-    }
-
-    #logoHome {
-        width: 40%;
-        height: 100%;
-        text-decoration: none;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-items: flex-start;
-        align-items: center;
-    }
-
-    #logoHome img {
-        height: 8vh;
-        width: auto;
-        transition: height 1s;
-    }
-
-    #logoHome img:hover {
+    #navbar {
+        gap: 65%;
         height: 10vh;
-        width: auto;
     }
 
-    h2 {
-        color: #E8E9EB;
-        text-align: right;
-        font-size: 4vh;
-    }
-
-    h2:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-
-    @keyframes hoveringText {
-        from {color: #E8E9EB;}
-        to {color: #D19C1D;}
+    .dropMenu {
+        width: 7vw;
+        height: 30%;
+        margin-left: 20px;
     }
 
     /* pop up menu */
 
-    .dropMenu {
-        margin-left: 5vh;
-        width: 6vw;
-        height: 3vw;
-    }
-    
-    .dropMenu img {
-        width: 100%;
-        height: auto;
-    }
-
-    #dropButton {
-        width: 3vw;
-        height: 3vw;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-    }
-
     #dropButton:hover #menu{
-        transform: translateX(565px);
+        transform: translateX(39vw);
         opacity: 1;
     }
 
     #menu {
-        width: 30vw;
+        width: 45vw;
         height: 90vh;
-        top: 79px;
-        left: -615px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        background-color: #240D05;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        gap: 65%;
-        transition: opacity 2s, transform 2s;
-    }
-
-    .sections {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        list-style: none;
-        margin: 0vh 3vw;
-        gap: 5vh;
+        left: -45vw;
+        gap: 60%;
     }
 
     .buttonText{
-        color: #E8E9EB;
-        text-align: justify;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Quicksand';
-        height: 100%;
-        font-size: 2vh;
-    }
-
-    .buttonText:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
+        font-size: 16px;
     }
 
     /* contact */
 
     #formasContacto {
-        display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    #formasContacto li {
-        list-style-type: none;
-        flex: 1;
-        margin: 3.5% 0% 3% 0%;
-        max-height: 4vh;
-        max-width: 4vh;
+        gap: 15px;
     }
 
     #formasContacto li a img { /*contact icons*/
-        max-height: 4vh;
-        max-width: 4vh;
+        max-height: 40px;
+        min-width: 35px;
     }
 
     /* contact ends */
@@ -822,188 +344,208 @@ h1{
 
     /*nav menu ends*/
 
-    /* main content */
-
-    .laCarta {
-        font-family: 'Quicksand';
-        text-align: center;
-        display: grid;
-        grid-row: 2;
-        row-gap: 2vh;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: 20vh 30vh repeat(2, auto) 30vh repeat(2, auto) 30vh repeat(2, auto) 30vh repeat(3, auto);
-    }
-
-    .titles{
-        height: 24vh;
-        padding-top: 6vh;
-        padding-right: 5vw;
-        font-size: 5vw;
-        border-top: 0.15vh solid #000000;
-        border-bottom: 0.15vh solid #000000;
-        background-color: white;
-        background-size: cover;
-        text-align: right;
-        font-family: 'Neonderthaw';
-        font-weight: normal;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
-
-    .items{
-        list-style: none;
-        padding-top: 5vh;
-        font-size: 1.7vw;
-    }
-
-    .footNotes{
-        height: 2vh;
-        padding: 0% 2vw;
-        font-size: 1.2vw;
-        font-weight: lighter;
-        text-align: justify; 
-    }
-
-    h1{
-        height: 10vh;
-        grid-row: 1;
-        grid-column: 1 / span 2;
-        font-size: 6vw;
-        text-shadow: 0 0 3px #E8E9EB;
-        color: black;
-        font-weight: normal;
-        align-self: center;
-        font-family: 'Neonderthaw';
-    }
-
-    #titleCoffee{
-        padding-left: 6vw;
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuCoffee2.png);
-        background-size: 120%;
-        text-align: center;
-
-    }
-
-    #coffee{
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-    #pricesCoffee{
-        grid-row: 3;
-        grid-column: 2;
-    }
-
-    #footCoffee{
-        grid-row: 4;
-        grid-column: 1 / span 2;    
-    }
-
-    #titleDrinks{
-        grid-row: 5;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuDrink2.png);
-    }
-
-    #drinks{
-        grid-row: 6;
-        grid-column: 1;
-    }
-
-    #pricesDrinks{
-        grid-row: 6;
-        grid-column: 2;
-    }
-
-    #titleSweet{
-        grid-row: 8;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuSweet2.png);
-    }
-
-    #sweet{
-        grid-row: 9;
-        grid-column: 1;
-    }
-
-    #pricesSweet{
-        grid-row: 9;
-        grid-column: 2;
-    }
-
-    #titleSalt{
-        padding-left: 6vw;
-        grid-row: 11;
-        grid-column: 1 / span 2;
-        background-image: url(../Images/MenuSalt2.png);
-        background-position: bottom;
-        text-align: center;
-    }
-
-    #salt{
-        grid-row: 12;
-        grid-column: 1;
-    }
-
-    #pricesSalt{
-        grid-row: 12;
-        grid-column: 2;
-    }
-
-    #footSalt{
-        grid-row: 13;
-        grid-column: 1 / span 2;    
-    }
-
-    /* main content ends*/
-
     /* footer */
 
     footer {
-        z-index: 2;
-        grid-row: 3;
-        gap: 2%;
-        background-color: #E8E9EB;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        font-family:'Quicksand';
+        column-gap: 10%;
     }
 
-    footer p{
-        text-align: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        color: #361307;
-        font-weight: lighter;
-        text-transform: uppercase;
-        gap: 2%;
-    }
+    /* footer ends */
 
-    #copyright {
-        grid-row: 1;
-        grid-column: 1;
-        font-size: 1vw;
-    }
+}
 
-    #phone {
-        grid-row: 1;
-        grid-column: 2;
-        font-size: 1vw;
-    }
+@media (min-width: 768px) and (max-width: 992px){
 
-    #slogan {
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        font-size: 1.5vw;
-    }
+/*nav menu starts*/
 
-    /* footer ends */   
-    
+#navbar {
+    gap: 75%;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+.buttonText{
+    font-size: 20px;
+}
+
+/* contact */
+
+#formasContacto {
+    column-gap: 3vw;
+}
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 55px;
+    min-width: 50px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/*nav menu ends*/
+
+/* footer */
+
+footer {
+    column-gap: 30%;
+}
+
+/* footer ends */
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+/*nav menu starts*/
+
+#navbar {
+    gap: 55%;
+}
+
+h2 {
+    font-size: 60px !important;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+.buttonText{
+    font-size: 30px;
+}
+
+/* contact */
+
+#formasContacto {
+    column-gap: 3vw;
+}
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 70px;
+    min-width: 65px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/*nav menu ends*/
+
+/* footer */
+
+footer {
+    column-gap: 20%;
+    font-size: 20px;
+}   
+
+#slogan {
+    font-size: 25px;
+}
+
+/* footer ends */
+
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+
+/*nav menu starts*/
+
+#navbar {
+    gap: 60%;
+}
+
+h2 {
+    font-size: 60px !important;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+.buttonText{
+    font-size: 35px;
+}
+
+/* contact */
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 75px;
+    min-width: 70px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/* footer */
+
+footer {
+    column-gap: 45%;
+    font-size: 25px;
+}   
+
+#slogan {
+    font-size: 30px;
+}
+
+/* footer ends */
+
+}
+
+@media (min-width: 1400px){
+
+.icon1 { /*small icons*/
+    width: 8%;
+    height: auto;
+}
+
+/*nav menu starts*/
+
+#navbar {
+    gap: 60%;
+}
+
+h2 {
+    font-size: 90px !important;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+#dropButton:hover #menu{
+    transform: translateX(49.3vw);
+}
+
+.buttonText{
+    font-size: 45px;
+}
+
+/* contact */
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 85px;
+    min-width: 80px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/* footer */
+
+footer {
+    column-gap: 10%;
+    font-size: 40px;
+}   
+
+#slogan {
+    font-size: 50px;
+}
+
+/* footer ends */
+
 }

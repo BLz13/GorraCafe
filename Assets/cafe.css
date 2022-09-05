@@ -1,16 +1,16 @@
 * {
-    font-family: 'Quicksand';
     margin: 0px;
     padding: 0px;
-    animation-name: starting;
     animation-duration: 2s;
+    column-gap: 5vw;
+    animation-name: starting;
 }
 
 @keyframes starting{
     from {opacity: 0;}
     to {opacity: 1;}
 }
-       
+
 body {
     display: grid;
     grid-template-rows: 10vh auto 10vh;
@@ -82,8 +82,8 @@ h2:hover {
 }
 
 .dropMenu img {
-    width: 25px;
-    height: auto;
+    max-width: 100%;
+    height: 100%;
 }
 
 #dropButton {
@@ -96,17 +96,17 @@ h2:hover {
 }
 
 #dropButton:hover #menu{
-    transform: translateX(200px);
+    transform: translateX(47vw);
     opacity: 1;
 }
 
 #menu {
     width: 50vw;
     height: 90vh;
-    top: 62px;
-    left: -218px;
+    top: 6.7vh;
+    left: -50vw;
     opacity: 0;
-    gap: 65%;
+    gap: 50%;
     padding-top: 2vh;
     overflow: hidden;
     position: absolute;
@@ -124,7 +124,7 @@ h2:hover {
     justify-content: space-between;
     list-style: none;
     padding-left: 10px;
-    margin: 0vh 3vw;
+    margin: 0vh 30px;
     gap: 5vh;
 }
 
@@ -151,10 +151,9 @@ h2:hover {
 #formasContacto {
     display: flex;
     flex-flow: row wrap ;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-    padding-left: 20px;
+    justify-content: space-evenly;
+    padding: 0px 30px 0px 40px;
+    column-gap: 3vw;
 }
 
 #formasContacto li {
@@ -163,7 +162,7 @@ h2:hover {
 
 #formasContacto li a img { /*contact icons*/
     max-height: 35px;
-    min-width: 30px;
+    min-width: 35px;
 }
 
 /* contact ends */
@@ -177,7 +176,7 @@ h2:hover {
 footer {
     grid-row: 3;
     z-index: 2;
-    column-gap: 10%;
+    column-gap: 2%;
     font-size: 80%;
     width: 100vw;
     grid-template-columns: repeat(2, 1fr);
@@ -301,175 +300,48 @@ li{
 
 /* main contenten ends */
 
-
-@media (min-width: 454px) and (max-width:  1280px){
-
-    body {
-        width: 100vw;
-        height: 100%;
-        grid-template-rows: 10vh auto 10vh;
-        background-color: #d6dbdfff;
-        font-family: 'Quicksand';
-        display: grid;
-        overflow-x: hidden;
-        justify-content: center;
-    }
-
-    .icon1 { /*small icons*/
-        width: 5%;
-        height: auto;
-    }
-
-    .icon2 { /*bigger icons*/
-        width: 15%;
-        height: auto;
-    }
+@media (min-width: 576px) and (max-width: 768px){
 
     /*nav menu starts*/
 
-    header {
-        z-index: 3;
-        grid-row: 1;
-        gap: 75%;
-        top: 0%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #361307;
-        position: sticky;
-    }
-
-    #logoHome {
-        width: 40%;
-        height: 100%;
-        text-decoration: none;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-items: flex-start;
-        align-items: center;
-    }
-
-    #logoHome img {
-        height: 8vh;
-        width: auto;
-        transition: height 1s;
-    }
-
-    #logoHome img:hover {
+    #navbar {
+        gap: 65%;
         height: 10vh;
-        width: auto;
     }
 
-    h2 {
-        color: #E8E9EB;
-        text-align: right;
-        font-size: 4vh;
-    }
-
-    h2:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-
-    @keyframes hoveringText {
-        from {color: #E8E9EB;}
-        to {color: #D19C1D;}
+    .dropMenu {
+        width: 7vw;
+        height: 30%;
+        margin-left: 20px;
     }
 
     /* pop up menu */
 
-    .dropMenu {
-        margin-left: 5vh;
-        width: 6vw;
-        height: 3vw;
-    }
-    
-    .dropMenu img {
-        width: 100%;
-        height: auto;
-    }
-
-    #dropButton {
-        width: 3vw;
-        height: 3vw;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-    }
-
     #dropButton:hover #menu{
-        transform: translateX(50vw);
+        transform: translateX(39vw);
         opacity: 1;
     }
 
     #menu {
-        width: 30vw;
+        width: 45vw;
         height: 90vh;
-        top: 7vh;
-        left: -54vw;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        background-color: #240D05;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        gap: 50%;
-        transition: opacity 2s, transform 2s;
-    }
-
-    .sections {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        list-style: none;
-        gap: 5vh;
+        left: -45vw;
+        gap: 60%;
     }
 
     .buttonText{
-        color: #E8E9EB;
-        text-align: justify;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Quicksand';
-        height: 100%;
-        font-size: 2vh;
-    }
-
-    .buttonText:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
+        font-size: 16px;
     }
 
     /* contact */
 
     #formasContacto {
-        display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    #formasContacto li {
-        list-style-type: none;
-        flex: 1;
-        margin: 3.5% 0% 3% 0%;
-        max-height: 4vh;
-        max-width: 4vh;
+        gap: 15px;
     }
 
     #formasContacto li a img { /*contact icons*/
-        max-height: 4vh;
-        max-width: 4vh;
+        max-height: 40px;
+        min-width: 35px;
     }
 
     /* contact ends */
@@ -478,283 +350,44 @@ li{
 
     /*nav menu ends*/
 
-    /* main contenten */
+    /* footer */
 
-    main{
-        width: 92vw;
-        padding: 5vh 2vw;
-        column-gap: 0vh;
-        row-gap: 4vh;
-        grid-template-rows: repeat(9, auto);
-        grid-template-columns: repeat(3, auto);
-        display: grid;
+    footer {
+        column-gap: 10%;
     }
 
+    /* footer ends */
+
+    /* main contenten */
+
     h1{
-        margin-bottom: 2vh;
-        font-size: 4vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
+        font-size: 60px !important;
     }
 
     h3{
-        margin-bottom: 2vh;
-        font-size: 4vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
+        font-size: 40px !important;
     }
 
     h4{
-        margin-bottom: 2vh;
-        font-size: 3vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
+        font-size: 35px !important;
     }
 
     h5{
-        margin: 2vh 0vh;
-        font-size: 2.5vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
+        font-size: 30px !important;
     }
 
-    p{
-        font-size: 1.5vw;
-        text-align: justify;
+    main p{
+        font-size: 20px !important;
     }
 
     li{
-        font-size: 1.5vw;
-        margin: 2vh 0vw 2vh 3vw;
-        list-style: none;
-    }
-
-    #aboutUs{
-        grid-row: 1;
-        grid-column: 1 / span 2;
-        width: 50vw;
-    }
-
-    #coffeeShop{
-        grid-row: 1;
-        grid-column: 3;
-    }
-
-    #introcoffee{
-        grid-row: 2;
-        grid-column: 1 / span 3;
-    }
-
-    #coffeeSpecies{
-        grid-row: 3;
-        grid-column: 1 / span 2;
-        width: 60vw;
-    }
-
-    /* table comparing */
-
-    #tableSpecies{
-        width: 90%;
-        column-gap: 5%;
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        display: grid;
-        justify-items: start;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #tableSpecies p{
-        font-size: 1.3vw;
-    }
-
-    #title1{
-        grid-row: 1;
-        grid-column: 1;
-    }
-    
-    #title2{
-        grid-row: 1;
-        grid-column: 2;
-    }
-    
-    #oneOne{
-        grid-row: 2;
-        grid-column: 1;
-    }
-    
-    #oneTwo{
-        grid-row: 3;
-        grid-column: 1;
-    }
-    
-    #oneThree{
-        grid-row: 4;
-        grid-column: 1;
-    }
-    
-    #oneFour{
-        grid-row: 5;
-        grid-column: 1;
-    }
-    
-    #oneFive{
-        grid-row: 6;
-        grid-column: 1;
-    }
-    
-    #oneSix{
-        grid-row: 7;
-        grid-column: 1;
-    }
-    
-    #twoOne{
-        grid-row: 2;
-        grid-column: 2;
-    }
-    
-    #twoTwo{
-        grid-row: 3;
-        grid-column: 2;
-    }
-    
-    #twoThree{
-        grid-row: 4;
-        grid-column: 2;
-    }
-    
-    #twoFour{
-        grid-row: 5;
-        grid-column: 2;
-    }
-    
-    #twoFive{
-        grid-row: 6;
-        grid-column: 2;
-    }
-    
-    #twoSix{
-        grid-row: 7;
-        grid-column: 2;
-    }
-
-    /* table comparing ends */
-
-    #fruta{
-        grid-row: 3;
-        grid-column: 3;
-        width: 30vw;
-        margin-top: 7.8vh;
-        margin-left: 5vw;
-        height: 91vh;
-        flex-flow: column;
-        align-items: center;
-        overflow-x: hidden;
-    }
-
-    #handpick{
-        grid-row: 4;
-        grid-column: 1 / span 3;
-    }
-
-    #drying{
-        grid-row: 5 / span 2;
-        grid-column: 1 / span 2;
-        width: 55vw;
-    }
-
-    #washedDrying{
-        grid-row: 5;
-        grid-column: 3;
-    }
-
-    #greenBeans{
-        grid-row: 6;
-        grid-column: 3;
-        overflow: hidden;
-    }
-
-    #toasting{
-        padding-left: 4vw;
-        grid-row: 7;
-        grid-column: 2 / span 2;
-    }
-
-    #toastedBeans{
-        grid-row: 7;
-        grid-column: 1;
-        margin-top: 7.6vh;
-        width: 25vw;
-        height: 29vh;
-        align-items: center;
-        flex-flow: column nowrap;
-        overflow-x: hidden;
-    }
-
-    #toastedBeans .polaroid{
-        max-width: 80%;
-    }
-
-    #toastedProces{
-        grid-row: 8;
-        grid-column: 1 / span 2;
-        width: 31vw;
-    }
-
-    #torrado{
-        grid-row: 8;
-        grid-column: 3;
-        align-self: center;
-    }
-
-    #barista{
-        grid-row: 9;
-        grid-column: 1 / span 2;
-        grid-column: 1 / span 2;
-        padding-right: 2vw;
-    }
-
-    #baristaPics{
-        grid-row: 9;
-        grid-column: 3;
-        height: 34vh;
-        margin-top: 13vh;
-        align-items: center;
+        font-size: 20px !important;
     }
 
     /* polaroid style */
 
-    .imageGallery{
-        width: 100%;
-        gap: 2vw;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        display: flex;
-        flex-flow: row nowrap;
-        overflow-x: scroll;
-        align-items: stretch;
-    }
-
-    .imageGallery .polaroid{
-        background-color: white;
-        box-shadow: none;
-        padding: 1vh 2%;
-        min-width: 43.5%;
-    }
-
-    .imageGallery .polaroid img{
-        min-width: 100%;
-        height: auto;
-    }
-
     .polaroid{
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 1vh 2vw;
-        max-width: 89%;
+        height: 100%;
     }
 
     .polaroid img{
@@ -762,581 +395,368 @@ li{
         height: auto;
     }
 
-    .container p{
-        text-align: center;
-        text-transform: capitalize;
-        font-style: italic;
-        font-size: 1vw;
-    }
-
     /* polaroid style ends */
 
     /* main contenten ends */
-
-    /* footer */
-
-    footer {
-        z-index: 2;
-        grid-row: 3;
-        gap: 2%;
-        background-color: #E8E9EB;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        font-family:'Quicksand';
-    }
-
-    footer p{
-        text-align: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        color: #361307;
-        font-weight: lighter;
-        text-transform: uppercase;
-        gap: 2%;
-    }
-
-    #copyright {
-        grid-row: 1;
-        grid-column: 1;
-        font-size: 1vw;
-    }
-
-    #phone {
-        grid-row: 1;
-        grid-column: 2;
-        font-size: 1vw;
-    }
-
-    #slogan {
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        font-size: 1.5vw;
-    }
-
-    /* footer ends */   
 
 }
 
-@media (min-width: 1280px){
-
-    body {
-        width: 100vw;
-        height: 100%;
-        grid-template-rows: 10vh auto 10vh;
-        background-color: #d6dbdfff;
-        font-family: 'Quicksand';
-        display: grid;
-        overflow-x: hidden;
-        justify-content: center;
-    }
-
-    .icon1 { /*small icons*/
-        width: 5%;
-        height: auto;
-    }
-
-    .icon2 { /*bigger icons*/
-        width: 15%;
-        height: auto;
-    }
-
-    /*nav menu starts*/
-
-    header {
-        z-index: 3;
-        grid-row: 1;
-        gap: 75%;
-        top: 0%;
-        width: 100vw;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #361307;
-        position: sticky;
-    }
-
-    #logoHome {
-        width: 40%;
-        height: 100%;
-        text-decoration: none;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-items: flex-start;
-        align-items: center;
-    }
-
-    #logoHome img {
-        height: 8vh;
-        width: auto;
-        transition: height 1s;
-    }
-
-    #logoHome img:hover {
-        height: 10vh;
-        width: auto;
-    }
-
-    h2 {
-        color: #E8E9EB;
-        text-align: right;
-        font-size: 4vh;
-    }
-
-    h2:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-
-    @keyframes hoveringText {
-        from {color: #E8E9EB;}
-        to {color: #D19C1D;}
-    }
-
-    /* pop up menu */
-
-    .dropMenu {
-        margin-left: 5vh;
-        width: 6vw;
-        height: 3vw;
-    }
-    
-    .dropMenu img {
-        width: 100%;
-        height: auto;
-    }
-
-    #dropButton {
-        width: 3vw;
-        height: 3vw;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-    }
-
-    #dropButton:hover #menu{
-        transform: translateX(565px);
-        opacity: 1;
-    }
-
-    #menu {
-        width: 30vw;
-        height: 90vh;
-        top: 79px;
-        left: -615px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        background-color: #240D05;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        gap: 50%;
-        transition: opacity 2s, transform 2s;
-    }
-
-    .sections {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        list-style: none;
-        gap: 5vh;
-    }
-
-    .buttonText{
-        color: #E8E9EB;
-        text-align: justify;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Quicksand';
-        height: 100%;
-        font-size: 2vh;
-    }
-
-    .buttonText:hover {
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-
-    /* contact */
-
-    #formasContacto {
-        display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    #formasContacto li {
-        list-style-type: none;
-        flex: 1;
-        margin: 3.5% 0% 3% 0%;
-        max-height: 4vh;
-        max-width: 4vh;
-    }
-
-    #formasContacto li a img { /*contact icons*/
-        max-height: 4vh;
-        max-width: 4vh;
-    }
-
-    /* contact ends */
-
-    /* pop up menu ends */
-
-    /*nav menu ends*/
-
-    /* main contenten */
-
-    main{
-        width: 92vw;
-        padding: 5vh 2vw;
-        column-gap: 0vh;
-        row-gap: 4vh;
-        grid-template-rows: repeat(9, auto);
-        grid-template-columns: repeat(3, auto);
-        display: grid;
-    }
-
-    h1{
-        margin-bottom: 2vh;
-        font-size: 4vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    h3{
-        margin-bottom: 2vh;
-        font-size: 4vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    h4{
-        margin-bottom: 2vh;
-        font-size: 3vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    h5{
-        margin: 2vh 0vh;
-        font-size: 2.5vw;
-        color: #240D05;
-        text-transform: capitalize;
-        font-weight: bolder;
-    }
-
-    p{
-        font-size: 1.5vw;
-        text-align: justify;
-    }
-
-    li{
-        font-size: 1.5vw;
-        margin: 2vh 0vw 2vh 3vw;
-        list-style: none;
-    }
-
-    #aboutUs{
-        grid-row: 1;
-        grid-column: 1 / span 2;
-        width: 50vw;
-    }
-
-    #coffeeShop{
-        grid-row: 1;
-        grid-column: 3;
-    }
-
-    #introcoffee{
-        grid-row: 2;
-        grid-column: 1 / span 3;
-    }
-
-    #coffeeSpecies{
-        grid-row: 3;
-        grid-column: 1 / span 2;
-        width: 60vw;
-    }
-
-    /* table comparing */
-
-    #tableSpecies{
-        width: 90%;
-        column-gap: 5%;
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        display: grid;
-        justify-items: start;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #tableSpecies p{
-        font-size: 1.3vw;
-    }
-
-    #title1{
-        grid-row: 1;
-        grid-column: 1;
-    }
-    
-    #title2{
-        grid-row: 1;
-        grid-column: 2;
-    }
-    
-    #oneOne{
-        grid-row: 2;
-        grid-column: 1;
-    }
-    
-    #oneTwo{
-        grid-row: 3;
-        grid-column: 1;
-    }
-    
-    #oneThree{
-        grid-row: 4;
-        grid-column: 1;
-    }
-    
-    #oneFour{
-        grid-row: 5;
-        grid-column: 1;
-    }
-    
-    #oneFive{
-        grid-row: 6;
-        grid-column: 1;
-    }
-    
-    #oneSix{
-        grid-row: 7;
-        grid-column: 1;
-    }
-    
-    #twoOne{
-        grid-row: 2;
-        grid-column: 2;
-    }
-    
-    #twoTwo{
-        grid-row: 3;
-        grid-column: 2;
-    }
-    
-    #twoThree{
-        grid-row: 4;
-        grid-column: 2;
-    }
-    
-    #twoFour{
-        grid-row: 5;
-        grid-column: 2;
-    }
-    
-    #twoFive{
-        grid-row: 6;
-        grid-column: 2;
-    }
-    
-    #twoSix{
-        grid-row: 7;
-        grid-column: 2;
-    }
-
-    /* table comparing ends */
-
-    #fruta{
-        grid-row: 3;
-        grid-column: 3;
-        width: 30vw;
-        margin-top: 7.8vh;
-        margin-left: 5vw;
-        height: 91vh;
-        flex-flow: column;
-        align-items: center;
-        overflow-x: hidden;
-    }
-
-    #handpick{
-        grid-row: 4;
-        grid-column: 1 / span 3;
-    }
-
-    #drying{
-        grid-row: 5 / span 2;
-        grid-column: 1 / span 2;
-        width: 55vw;
-    }
-
-    #washedDrying{
-        grid-row: 5;
-        grid-column: 3;
-    }
-
-    #greenBeans{
-        grid-row: 6;
-        grid-column: 3;
-        overflow: hidden;
-    }
-
-    #toasting{
-        padding-left: 4vw;
-        grid-row: 7;
-        grid-column: 2 / span 2;
-    }
-
-    #toastedBeans{
-        grid-row: 7;
-        grid-column: 1;
-        margin-top: 7.6vh;
-        width: 25vw;
-        height: 29vh;
-        align-items: center;
-        flex-flow: column nowrap;
-        overflow-x: hidden;
-    }
-
-    #toastedBeans .polaroid{
-        max-width: 80%;
-    }
-
-    #toastedProces{
-        grid-row: 8;
-        grid-column: 1 / span 2;
-        width: 31vw;
-    }
-
-    #torrado{
-        grid-row: 8;
-        grid-column: 3;
-        align-self: center;
-    }
-
-    #barista{
-        grid-row: 9;
-        grid-column: 1 / span 2;
-        grid-column: 1 / span 2;
-        padding-right: 2vw;
-    }
-
-    #baristaPics{
-        grid-row: 9;
-        grid-column: 3;
-        height: 34vh;
-        margin-top: 13vh;
-        align-items: center;
-    }
-
-    /* polaroid style */
-
-    .imageGallery{
-        width: 100%;
-        gap: 2vw;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        display: flex;
-        flex-flow: row nowrap;
-        overflow-x: scroll;
-        align-items: stretch;
-    }
-
-    .imageGallery .polaroid{
-        background-color: white;
-        box-shadow: none;
-        padding: 1vh 2%;
-        min-width: 43.5%;
-    }
-
-    .imageGallery .polaroid img{
-        min-width: 100%;
-        height: auto;
-    }
-
-    .polaroid{
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 1vh 2vw;
-        max-width: 89%;
-    }
-
-    .polaroid img{
-        max-width: 100%;
-        height: auto;
-    }
-
-    .container p{
-        text-align: center;
-        text-transform: capitalize;
-        font-style: italic;
-        font-size: 1vw;
-    }
-
-    /* polaroid style ends */
-
-    /* main contenten ends */
-
-    /* footer */
-
-    footer {
-        z-index: 2;
-        grid-row: 3;
-        gap: 2%;
-        background-color: #E8E9EB;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        font-family:'Quicksand';
-    }
-
-    footer p{
-        text-align: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        color: #361307;
-        font-weight: lighter;
-        text-transform: uppercase;
-        gap: 2%;
-    }
-
-    #copyright {
-        grid-row: 1;
-        grid-column: 1;
-        font-size: 1vw;
-    }
-
-    #phone {
-        grid-row: 1;
-        grid-column: 2;
-        font-size: 1vw;
-    }
-
-    #slogan {
-        grid-row: 2;
-        grid-column: 1 / span 2;
-        font-size: 1.5vw;
-    }
-
-    /* footer ends */   
+@media (min-width: 768px) and (max-width: 992px){
+
+/*nav menu starts*/
+
+#navbar {
+    gap: 75%;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+.buttonText{
+    font-size: 20px;
+}
+
+/* contact */
+
+#formasContacto {
+    column-gap: 3vw;
+}
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 55px;
+    min-width: 50px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/*nav menu ends*/
+
+/* footer */
+
+footer {
+    column-gap: 30%;
+}
+
+/* footer ends */
+
+/* main contenten */
+
+h1{
+    font-size: 60px !important;
+}
+
+h3{
+    font-size: 40px !important;
+}
+
+h4{
+    font-size: 35px !important;
+}
+
+h5{
+    font-size: 30px !important;
+}
+
+main p{
+    font-size: 20px !important;
+}
+
+li{
+    font-size: 20px !important;
+}
+
+/* polaroid style */
+
+.polaroid{
+    height: 100%;
+}
+
+.polaroid img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* polaroid style ends */
+
+/* main contenten ends */
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+/*nav menu starts*/
+
+#navbar {
+    gap: 55%;
+}
+
+h2 {
+    font-size: 60px !important;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+.buttonText{
+    font-size: 30px;
+}
+
+/* contact */
+
+#formasContacto {
+    column-gap: 3vw;
+}
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 70px;
+    min-width: 65px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/*nav menu ends*/
+
+/* footer */
+
+footer {
+    column-gap: 20%;
+    font-size: 20px;
+}   
+
+#slogan {
+    font-size: 25px;
+}
+
+/* footer ends */
+
+/* main contenten */
+
+h1{
+    font-size: 60px !important;
+}
+
+h3{
+    font-size: 40px !important;
+}
+
+h4{
+    font-size: 35px !important;
+}
+
+h5{
+    font-size: 30px !important;
+}
+
+main p{
+    font-size: 20px !important;
+}
+
+li{
+    font-size: 20px !important;
+}
+
+/* polaroid style */
+
+.polaroid{
+    height: 100%;
+}
+
+.polaroid img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* polaroid style ends */
+
+/* main contenten ends */
+
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+
+/*nav menu starts*/
+
+#navbar {
+    gap: 60%;
+}
+
+h2 {
+    font-size: 60px !important;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+.buttonText{
+    font-size: 35px;
+}
+
+/* contact */
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 75px;
+    min-width: 70px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/* footer */
+
+footer {
+    column-gap: 45%;
+    font-size: 25px;
+}   
+
+#slogan {
+    font-size: 30px;
+}
+
+/* footer ends */
+
+/* main contenten */
+
+h1{
+    font-size: 70px !important;
+}
+
+h3{
+    font-size: 50px !important;
+}
+
+h4{
+    font-size: 45px !important;
+}
+
+h5{
+    font-size: 40px !important;
+}
+
+main p{
+    font-size: 30px !important;
+}
+
+li{
+    font-size: 30px !important;
+}
+
+/* polaroid style */
+
+.polaroid{
+    height: 100%;
+}
+
+.polaroid img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* polaroid style ends */
+
+/* main contenten ends */
+
+}
+
+@media (min-width: 1400px){
+
+.icon1 { /*small icons*/
+    width: 8%;
+    height: auto;
+}
+
+/*nav menu starts*/
+
+#navbar {
+    gap: 70%;
+}
+
+h2 {
+    font-size: 70px !important;
+}
+
+/*nav menu ends*/
+
+/* pop up menu */
+
+#dropButton:hover #menu{
+    transform: translateX(49.3vw);
+}
+
+.buttonText{
+    font-size: 45px;
+}
+
+/* contact */
+
+#formasContacto li a img { /*contact icons*/
+    max-height: 85px;
+    min-width: 80px;
+}
+
+/* contact ends */
+
+/* pop up menu ends */
+
+/* footer */
+
+footer {
+    column-gap: 10%;
+    font-size: 40px;
+}   
+
+#slogan {
+    font-size: 50px;
+}
+
+/* footer ends */
+
+/* main contenten */
+
+h1{
+    font-size: 70px !important;
+}
+
+h3{
+    font-size: 50px !important;
+}
+
+h4{
+    font-size: 45px !important;
+}
+
+h5{
+    font-size: 40px !important;
+}
+
+main p{
+    font-size: 30px !important;
+}
+
+li{
+    font-size: 30px !important;
+}
+
+/* polaroid style */
+
+.polaroid{
+    height: 100%;
+}
+
+.polaroid img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* polaroid style ends */
+
+/* main contenten ends */
 
 }
