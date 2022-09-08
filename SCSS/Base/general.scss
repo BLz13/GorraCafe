@@ -1,0 +1,273 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    animation-duration: 2s;
+    animation-name: starting;
+    font-family: $primaryTypo;
+}
+
+@keyframes starting{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes hoveringText {
+    from {color: #E8E9EB;}
+    to {color: #D19C1D;}
+}
+
+body {
+    display: grid;
+    grid-template-rows: 10vh auto 10vh;
+    font-size: 20px;
+}
+
+.icon1 { /*small icons*/
+    width: 20px;
+    height: auto;
+}
+
+main {
+    grid-row: 2;
+    background-color: $background;
+    font-family: 'Quicksand';
+    overflow-x: hidden;
+}
+
+h1 {
+    color: $platinum;
+    text-align: right;
+    font-size: 1.8rem !important;
+    &:hover{
+        animation-name: hoveringText;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+    }
+}
+
+h2{
+    color: $platinum;
+    text-align: right;
+    font-size: 1.8rem !important;
+    &:hover{
+        animation-name: hoveringText;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+    }
+}
+
+h3{
+    font-size: 1.5rem !important;
+    color: $brown2;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+h4{
+    font-size: 1.3rem !important;
+    color: $brown2;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+h5{
+    font-size: 1.2rem !important;
+    color: $brown2;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+h6{
+    color: $platinum;
+    text-align: left;
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
+}
+
+p{
+    color: $brown2;
+    font-size: 1rem;
+}
+
+.polaroid{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2vh 3vw;
+    height: 100%;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .container{
+        p{
+        text-align: center;
+        text-transform: capitalize;
+        font-style: italic;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    h2{
+        font-size: 2.5rem !important;
+    }
+    
+    h3{
+        font-size: 2rem !important;
+    }
+    
+    h4{
+        font-size: 1.8rem !important;
+    }
+    
+    h5{
+        font-size: 1.7rem !important;
+    }
+    
+    h6{
+        font-size: 1.2rem !important;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+
+    h1 {
+        font-size: 2.6rem !important;
+    }
+    
+    h2{
+        font-size: 2.6rem !important;
+    }
+    
+    h3{
+        font-size: 2.2rem !important;
+    }
+    
+    h4{
+        font-size: 2rem !important;
+    }
+    
+    h5{
+        font-size: 1.9rem !important;
+    }
+    
+    h6{
+        font-size: 1.5rem !important;
+    } 
+    
+    p{
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+    h1 {
+        font-size: 2.8rem !important;
+    }
+    
+    h2{
+        font-size: 2.8rem !important;
+    }
+    
+    h3{
+        font-size: 2.4rem !important;
+    }
+    
+    h4{
+        font-size: 2.2rem !important;
+    }
+    
+    h5{
+        font-size: 2.1rem !important;
+    }
+    
+    h6{
+        font-size: 1.5rem !important;
+    }
+    
+    p{
+        font-size: 1.9rem;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+
+    h1 {
+        font-size: 3.2rem !important;
+    }
+    
+    h2{
+        font-size: 3.2rem !important;
+    }
+    
+    h3{
+        font-size: 2.6rem !important;
+    }
+    
+    h4{
+        font-size: 2.4rem !important;
+    }
+    
+    h5{
+        font-size: 2.3rem !important;
+    }
+    
+    h6{
+        font-size: 2rem !important;
+    }  
+    
+    p{
+        font-size: 2.1rem;
+    }
+
+}
+
+@media (min-width: 1400px){
+
+    h1 {
+        font-size: 3.8rem !important;
+    }
+    
+    h2{
+        font-size: 3.8rem !important;
+    }
+    
+    h3{
+        font-size: 2.6rem !important;
+    }
+    
+    h4{
+        font-size: 2.4rem !important;
+    }
+    
+    h5{
+        font-size: 2.3rem !important;
+    }
+    
+    h6{
+        font-size: 2.1rem !important;
+    }
+    
+    p{
+        font-size: 2.3rem;
+    }
+    
+}

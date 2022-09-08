@@ -3,7 +3,7 @@
     <html lang="es">
 
         <head>
-            <title>Gorra Cafe</title> <!--En vez de escribir home, utilice un posible icono de la marca-->
+            <title>Gorra Cafe</title>
             <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,56 +11,50 @@
             <meta name="keywords" content="cafe, panaderia, libre-de-gluten, sin-tacc, suscripcion, tostadores">
             <meta name="author" content="Bruno Lazo">
             <link rel="stylesheet" href="./Assets/index.css">
+            <link rel="stylesheet" href="./Assets/main.css">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
         </head>
 
         <body>
-            <header id="navbar" class="d-flex flex-row flex-nowrap justify-content-between align-items-center">
+            <header id="navbar">
                 <div class="dropMenu">
                     <div id="dropButton">
                         <div id="menu">
                             <ul class="sections">
-                                    <li>
-                                    <a class="buttonText" href="./Pages/cafe.html" target="_self">sobre nosotros y el café</a>
+                                <li>
+                                    <a href="./Pages/cafe.html" target="_self"><h6 class="buttonText">sobre nosotros y el café</h6></a>
                                 </li>
                                 <li>
-                                    <a class="buttonText" href="./Pages/carta.html" target="_self">nuestra carta</a>
+                                    <a href="./Pages/carta.html" target="_self"><h6 class="buttonText">nuestra carta</h6></a>
                                 </li>
                                 <li>
-                                    <a class="buttonText" href="./Pages/suscripcion.html" target="_self">suscripcion</a>
-                                </li>
-                            </ul>
-                            <ul id="formasContacto">
-                                <li> <!--missing link, accout not yet created-->
-                                    <a href="./index.html" target="_self"><img src="./Images/InstagramCafe.png" alt="Nuestro Instagram"></a>
-                                </li>
-                                <li> <!--missing link, accout not yet created-->
-                                    <a href="./index.html" target="_self"><img src="./Images/FacebookCafe.png" alt="Nuestro Facebook"></a>
-                                </li>
-                                <li> <!--missing link, accout not yet created-->
-                                    <a href="./index.html" target="_self"><img src="./Images/WPPCafe.png" alt="Contactanos por WhatsApp"></a>
-                                </li>
-                                <li> <!--missing link, accout not yet created-->
-                                    <a href="./index.html" target="_self"><img src="./Images/TelegramCafe.png" alt="Escribinos a Telegram"></a>
+                                    <a href="./Pages/suscripcion.html" target="_self"><h6 class="buttonText">suscripcion</h6></a>
                                 </li>
                                 <li>
-                                    <a href="./Pages/contacto.html" target="_self"><img src="./Images/MailCafe.png" alt="Mandanos tu sugerencia"></a>
+                                    <a href="./Pages/contacto.html" target="_self"><h6 class="buttonText">contacto</h6></a>
+                                </li>
+                                <li>
+                                    <ul id="formasContacto">
+                                        <li> <!--missing link, accout not yet created-->
+                                            <a href="./index.html" target="_self"><img src="./Images/InstagramCafe.png" alt="Nuestro Instagram"></a>
+                                        </li>
+                                        <li> <!--missing link, accout not yet created-->
+                                            <a href="./index.html" target="_self"><img src="./Images/FacebookCafe.png" alt="Nuestro Facebook"></a>
+                                        </li>
+                                        <li> <!--missing link, accout not yet created-->
+                                            <a href="./index.html" target="_self"><img src="./Images/WPPCafe.png" alt="Contactanos por WhatsApp"></a>
+                                        </li>
+                                        <li> <!--missing link, accout not yet created-->
+                                            <a href="./index.html" target="_self"><img src="./Images/TelegramCafe.png" alt="Escribinos a Telegram"></a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <img src="./Images/Menu.png" alt="Menu">
-                </div class="dropMenu">
+                </div>
                 <a id="logoHome" href="./index.html" target="_self">
                     <h1>Gorra Café</h1>
                     <img src="./Images/LogoHome.png" alt="Home">

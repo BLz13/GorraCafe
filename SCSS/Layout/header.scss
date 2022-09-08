@@ -1,0 +1,240 @@
+#navbar {
+    z-index: 3;
+    grid-row: 1;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+    padding: 0.5vh 2vw;
+    column-gap: 50vw;
+    background-color: $brown1;
+    position: sticky;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    .dropMenu {
+        margin: 3.5vh 0px;
+        height: 3vh;
+        width: auto;
+        img {
+            width: auto;
+            max-height: 95%;
+        }
+        #dropButton {
+            top: 33%;
+            width: 3vh;
+            height: 3vh;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            #menu {
+                width: 45vw;
+                height: 90vh;
+                top: 6.7vh;
+                left: -45vw;
+                opacity: 0;
+                padding: 2vh 2vw;
+                overflow: hidden;
+                position: absolute;
+                background-color: $brown2;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                transition: opacity 2s, transform 2s;
+                .sections {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: flex-start;
+                    list-style: none;
+                    padding: 0px;
+                    row-gap: 5vh;
+                    height: 100%;
+                    width: 100%;
+                    li a{
+                        text-decoration: none;
+                    }
+                    .buttonText{
+                        text-transform: uppercase;
+                        &:hover {
+                            animation-name: hoveringText;
+                            animation-duration: 1s;
+                            animation-direction: alternate;
+                            animation-timing-function: linear;
+                            animation-fill-mode: both;
+                        }
+                    }
+                    #formasContacto {
+                        display: flex;
+                        flex-flow: row nowrap ;
+                        justify-content: space-between;
+                        padding: 0px;
+                        li {
+                            list-style-type: none;
+                            a{
+                                img {
+                                    max-height: 25px;
+                                    min-width: 23px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover #menu{
+                transform: translateX(42.9vw);
+                opacity: 1;
+            }
+        }
+    }       
+    #logoHome {
+        width: 40%;
+        height: 100%;
+        text-decoration: none;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items: flex-start;
+        align-items: center;
+        img {
+            height: 8vh;
+            width: auto;
+            transition: height 1s;
+            &:hover{
+                height: 10vh;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+
+    #navbar {
+        column-gap: 60vw;
+        .dropMenu {
+            #dropButton {
+                #menu {
+                    .sections {
+                        #formasContacto {
+                            li {
+                                a{
+                                    img {
+                                        max-height: 45px;
+                                        min-width: 40px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+
+    #navbar {
+        .dropMenu {
+            #dropButton {
+                #menu {
+                    top: 6.6vh;
+                    .sections {
+                        #formasContacto {
+                            li {
+                                a{
+                                    img {
+                                        max-height: 50px;
+                                        min-width: 45px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+    #navbar {
+        column-gap: 60vw;
+        .dropMenu {
+            #dropButton {
+                #menu {
+                    .sections {
+                        #formasContacto {
+                            li {
+                                a{
+                                    img {
+                                        max-height: 50px;
+                                        min-width: 45px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover #menu{
+                    transform: translateX(42.9vw);
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+
+    #navbar {
+        column-gap: 60vw;
+        .dropMenu {
+            #dropButton {
+                #menu {
+                    .sections {
+                        #formasContacto {
+                            li {
+                                a{
+                                    img {
+                                        max-height: 70px;
+                                        min-width: 65px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1400px){
+
+    #navbar {
+        column-gap: 60vw;
+        .dropMenu {
+            #dropButton {
+                #menu {
+                    .sections {
+                        #formasContacto {
+                            li {
+                                a{
+                                    img {
+                                        max-height: 75px;
+                                        min-width: 70px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

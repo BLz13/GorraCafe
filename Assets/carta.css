@@ -1,239 +1,12 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    animation-duration: 2s;
-    animation-name: starting;
-}
-
-@keyframes starting{
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-body {
-    display: grid;
-    grid-template-rows: 10vh auto 10vh;
-}
-
-.icon1 { /*small icons*/
-    width: 20px;
-    height: auto;
-}
-
-/*nav menu starts*/
-
-#navbar {
-    z-index: 3;
-    grid-row: 1;
-    width: 100vw;
-    top: 0%;
-    left: 0%;
-    padding-left: 10px;
-    background-color: #361307;
-    position: sticky;
-}
-
-#logoHome {
-    width: 40%;
-    height: 100%;
-    text-decoration: none;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-items: flex-start;
-    align-items: center;
-}
-
-#logoHome img {
-    height: 8vh;
-    width: auto;
-    transition: height 1s;
-}
-
-#logoHome img:hover {
-    height: 10vh;
-    width: auto;
-}
-
-h2 {
-    color: #E8E9EB;
-    text-align: right;
-    font-size: 7vw;
-}
-
-h2:hover {
-    animation-name: hoveringText;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-}
-
-@keyframes hoveringText {
-    from {color: #E8E9EB;}
-    to {color: #D19C1D;}
-}
-
-/* pop up menu */
-
-.dropMenu {
-    width: 7vw;
-    height: 30%;
-}
-
-.dropMenu img {
-    max-width: 100%;
-    height: 100%;
-}
-
-#dropButton {
-    top: 33%;
-    width: 7vw;
-    height: 36%;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-}
-
-#dropButton:hover #menu{
-    transform: translateX(47vw);
-    opacity: 1;
-}
-
-#menu {
-    width: 50vw;
-    height: 90vh;
-    top: 6.7vh;
-    left: -50vw;
-    opacity: 0;
-    gap: 50%;
-    padding-top: 2vh;
-    overflow: hidden;
-    position: absolute;
-    background-color: #240D05;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transition: opacity 2s, transform 2s;
-}
-
-.sections {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    list-style: none;
-    padding-left: 10px;
-    margin: 0vh 30px;
-    gap: 5vh;
-}
-
-.buttonText{
-    color: #E8E9EB;
-    text-align: justify;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Quicksand';
-    height: 100%;
-    font-size: 4vw;
-}
-
-.buttonText:hover {
-    animation-name: hoveringText;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-}
-
-/* contact */
-
-#formasContacto {
-    display: flex;
-    flex-flow: row wrap ;
-    justify-content: space-evenly;
-    padding: 0px 30px 0px 40px;
-    column-gap: 3vw;
-}
-
-#formasContacto li {
-    list-style-type: none;
-}
-
-#formasContacto li a img { /*contact icons*/
-    max-height: 35px;
-    min-width: 35px;
-}
-
-/* contact ends */
-
-/* pop up menu ends */
-
-/*nav menu ends*/
-
-/* footer */
-
-footer {
-    grid-row: 3;
-    z-index: 2;
-    column-gap: 2%;
-    font-size: 80%;
-    width: 100vw;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-between;
-    background-color: #E8E9EB;
-    overflow: hidden;
-    display: grid;
-}
-
-footer p{
-    text-align: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    color: #240D05;
-    font-weight: lighter;
-    text-transform: uppercase;
-    font-family:'Quicksand';
-    padding-top: 5%;
-    padding-left: 10px;
-    gap: 10px;
-}
-
-#copyright {
-    grid-row: 1;
-    grid-column: 1;
-}
-
-#phone {
-    grid-row: 1;
-    grid-column: 2;
-}
-
-#slogan {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    font-size: 100%;
-}
-
-/* footer ends */
-
 /* main content */
-
-.laCarta {
-    font-family: 'Quicksand';
-    text-align: center;
-}
 
 .titles{
     height: 24vh;
-    font-size: 350%;
-    background-size: 100%;
+    font-size: 3rem !important;
+    background-size: 100% auto;
     border-top: 0.15vh solid #000000;
     border-bottom: 0.15vh solid #000000;
+    color: #240D05;
     text-align: right;
     font-family: 'Neonderthaw';
     font-weight: normal;
@@ -242,20 +15,15 @@ footer p{
     background-repeat: no-repeat;
 }
 
-.footNotes{
-    font-size: 80%;
-    font-weight: lighter;
-    text-align: justify; 
+h1{
+    text-align: center !important;
+    border: none !important;
 }
 
-h1{
-    font-size: 6vh !important;
-    text-shadow: 0 0 3px #E8E9EB;
-    color: black;
-    font-weight: normal;
-    align-self: center;
-    font-family: 'Neonderthaw';
-    text-align: center;
+.footNotes{
+    font-size: 0.9rem;
+    font-weight: lighter;
+    text-align: justify; 
 }
 
 #titleCoffee{
@@ -280,272 +48,71 @@ h1{
 
 @media (min-width: 576px){
     
-    main{
-
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-        padding-top: 0vh;
-        border-radius: 10px;
-        border-top: 0.15vh solid #000000;
-        border-bottom: 0.15vh solid #000000;
-        border-left: 0.15vw solid #000000;
-        border-right: 0.15vw solid #000000;
-        
+    #laCarta{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        border: 0.3vh solid #000000;
+        border-radius: 50px;
     }
+
 }
 
 @media (min-width: 576px) and (max-width: 768px){
 
-    /*nav menu starts*/
-
-    #navbar {
-        gap: 65%;
-        height: 10vh;
+    .titles{
+        font-size: 3rem !important;
     }
-
-    .dropMenu {
-        width: 7vw;
-        height: 30%;
-        margin-left: 20px;
+    
+    .footNotes{
+        font-size: 1.4rem;
     }
-
-    /* pop up menu */
-
-    #dropButton:hover #menu{
-        transform: translateX(39vw);
-        opacity: 1;
-    }
-
-    #menu {
-        width: 45vw;
-        height: 90vh;
-        left: -45vw;
-        gap: 60%;
-    }
-
-    .buttonText{
-        font-size: 16px;
-    }
-
-    /* contact */
-
-    #formasContacto {
-        gap: 15px;
-    }
-
-    #formasContacto li a img { /*contact icons*/
-        max-height: 40px;
-        min-width: 35px;
-    }
-
-    /* contact ends */
-
-    /* pop up menu ends */
-
-    /*nav menu ends*/
-
-    /* footer */
-
-    footer {
-        column-gap: 10%;
-    }
-
-    /* footer ends */
 
 }
 
 @media (min-width: 768px) and (max-width: 992px){
 
-/*nav menu starts*/
+    .titles{
+        font-size: 3.5rem !important;
+    }
 
-#navbar {
-    gap: 75%;
-}
-
-/*nav menu ends*/
-
-/* pop up menu */
-
-.buttonText{
-    font-size: 20px;
-}
-
-/* contact */
-
-#formasContacto {
-    column-gap: 3vw;
-}
-
-#formasContacto li a img { /*contact icons*/
-    max-height: 55px;
-    min-width: 50px;
-}
-
-/* contact ends */
-
-/* pop up menu ends */
-
-/*nav menu ends*/
-
-/* footer */
-
-footer {
-    column-gap: 30%;
-}
-
-/* footer ends */
+    .footNotes{
+        font-size: 1.6rem;
+    }
 
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
 
-/*nav menu starts*/
-
-#navbar {
-    gap: 55%;
-}
-
-h2 {
-    font-size: 60px !important;
-}
-
-/*nav menu ends*/
-
-/* pop up menu */
-
-.buttonText{
-    font-size: 30px;
-}
-
-/* contact */
-
-#formasContacto {
-    column-gap: 3vw;
-}
-
-#formasContacto li a img { /*contact icons*/
-    max-height: 70px;
-    min-width: 65px;
-}
-
-/* contact ends */
-
-/* pop up menu ends */
-
-/*nav menu ends*/
-
-/* footer */
-
-footer {
-    column-gap: 20%;
-    font-size: 20px;
-}   
-
-#slogan {
-    font-size: 25px;
-}
-
-/* footer ends */
+    .titles{
+        font-size: 4rem !important;
+    }
+    
+    .footNotes{
+        font-size: 1.8rem;
+    }
 
 }
 
 @media (min-width: 1200px) and (max-width: 1400px){
 
-/*nav menu starts*/
-
-#navbar {
-    gap: 60%;
-}
-
-h2 {
-    font-size: 60px !important;
-}
-
-/*nav menu ends*/
-
-/* pop up menu */
-
-.buttonText{
-    font-size: 35px;
-}
-
-/* contact */
-
-#formasContacto li a img { /*contact icons*/
-    max-height: 75px;
-    min-width: 70px;
-}
-
-/* contact ends */
-
-/* pop up menu ends */
-
-/* footer */
-
-footer {
-    column-gap: 45%;
-    font-size: 25px;
-}   
-
-#slogan {
-    font-size: 30px;
-}
-
-/* footer ends */
+    .titles{
+        font-size: 4.5rem !important;
+    }
+    
+    .footNotes{
+        font-size: 2rem;
+    }
 
 }
 
 @media (min-width: 1400px){
 
-.icon1 { /*small icons*/
-    width: 8%;
-    height: auto;
-}
-
-/*nav menu starts*/
-
-#navbar {
-    gap: 60%;
-}
-
-h2 {
-    font-size: 90px !important;
-}
-
-/*nav menu ends*/
-
-/* pop up menu */
-
-#dropButton:hover #menu{
-    transform: translateX(49.3vw);
-}
-
-.buttonText{
-    font-size: 45px;
-}
-
-/* contact */
-
-#formasContacto li a img { /*contact icons*/
-    max-height: 85px;
-    min-width: 80px;
-}
-
-/* contact ends */
-
-/* pop up menu ends */
-
-/* footer */
-
-footer {
-    column-gap: 10%;
-    font-size: 40px;
-}   
-
-#slogan {
-    font-size: 50px;
-}
-
-/* footer ends */
+    .titles{
+        font-size: 5rem !important;
+    }
+    
+    .footNotes{
+        font-size: 2.2rem;
+    }
 
 }
