@@ -1,0 +1,121 @@
+
+
+#mainCarta{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    row-gap: 5vh;
+    padding-top: 5vh !important;
+    padding-bottom: 5vh !important;
+    h1{
+        color: $brown2;
+        font-family: 'Neonderthaw' !important;
+        font-weight: normal;
+        text-align: center !important;
+        @media (orientation: portrait){
+            font-size: 20vw !important;
+        }
+        @media (orientation: landscape){
+            font-size: 10vh !important;
+        }
+        &:hover{
+            animation-play-state: paused !important;
+        }
+    }
+    .titles{
+        @media (orientation: portrait){
+            background-size: cover;
+            h3{
+                font-size: 15vw !important;
+            }
+        }
+        @media (orientation: landscape){
+            background-size: contain;
+            h3{
+                font-size: 8vh !important;
+            }
+        }
+        @media (min-width: 768px){
+            border: 0.15vh solid $brown2;
+            border-radius: 20px;
+        }
+        height: 30vh;
+        border-top: 0.15vh solid #000000;
+        border-bottom: 0.15vh solid #000000;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        h3{
+            color: $brown2;
+            padding-top: 2vh;
+            padding-right: 2vw;
+            text-align: right;
+            font-family: 'Neonderthaw' !important;
+            font-weight: normal;
+        }
+    }
+    #titleCoffee{
+        @media (orientation: landscape){
+            background-image: url(../Images/MenuCoffee2.png);
+        }
+        @media (orientation: portrait){
+            background-image: url(../Images/MenuCoffee1.png);
+            background-position: bottom;
+        }
+        h3{
+            padding-top: 6vh;
+        }
+    }
+    #titleDrinks{
+        @media (orientation: landscape){
+            background-image: url(../Images/MenuDrink2.png);
+        }
+        @media (orientation: portrait){
+            background-image: url(../Images/MenuDrink1.png);
+        }
+    }
+    #titleSweet{
+        @media (orientation: landscape){
+            background-image: url(../Images/MenuSweet2.png);
+        }
+        @media (orientation: portrait){
+            background-image: url(../Images/MenuSweet1.png);
+        }
+    }
+    #titleSalt{
+        @media (orientation: landscape){
+            background-image: url(../Images/MenuSalt2.png);
+        }
+        @media (orientation: portrait){
+            background-image: url(../Images/MenuSalt1.png);
+            background-position: bottom;
+        }
+    }
+    .footNotes{
+        font-weight: lighter;
+        text-align: justify; 
+    }
+    @media (orientation: portrait){
+        .footNotes{
+            font-size: 2vw;
+        }
+    }
+    @media (orientation: landscape){
+        .footNotes{
+            font-size: 2vh;
+        }
+    }
+    .prices{
+        text-align: right;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){}
+
+@media (min-width: 768px) and (max-width: 992px){}
+
+@media (min-width: 992px) and (max-width: 1200px){}
+
+@media (min-width: 1200px) and (max-width: 1400px){}
+
+@media (min-width: 1400px){}

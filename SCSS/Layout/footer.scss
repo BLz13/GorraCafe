@@ -1,3 +1,4 @@
+
 footer {
     padding: 0vh 1vw;
     grid-row: 3;
@@ -20,7 +21,6 @@ footer {
         color: $brown2;
         margin: 0px;
         padding: 0px;
-        font-size: 0.7rem;
         column-gap: 1vw;
     }
     #copyright {
@@ -38,72 +38,36 @@ footer {
     } 
 }
 
-@media (min-width: 576px) and (max-width: 768px){
+@media (orientation: portrait){
+    
+    footer {
+        p{
+            font-size: 2.5vw !important;
+        }
+        #slogan{
+            font-size: 3vw !important;
+        }
+    }
+
+}
+
+@media (orientation: landscape){
+    
+    footer {
+        p{
+            font-size: 1.2vh !important;
+        }
+        #slogan{
+            font-size: 1.7vh !important;
+        }
+    }
+
+}
+
+@media (min-width: 576px){
 
     footer {
         column-gap: 40%;
-        p{
-            font-size: 0.8rem;
-        }
-        #slogan {
-            font-size: 1.1rem;
-        }
     }
 
-}
-
-@media (min-width: 768px) and (max-width: 992px){
-
-    footer {
-        column-gap: 45%;
-        p{
-            font-size: 1rem;
-        } 
-        #slogan {
-            font-size: 1.3rem;
-        }
-    }
-
-}
-
-@media (min-width: 992px) and (max-width: 1200px){
-
-    footer {
-        column-gap: 45%;
-        p{
-            font-size: 1.2rem;
-        } 
-        #slogan {
-            font-size: 1.5rem;
-        }
-    }
-
-}
-
-@media (min-width: 1200px) and (max-width: 1400px){
-
-    footer {
-        column-gap: 45%;
-        p{
-            font-size: 1.4rem;
-        } 
-        #slogan {
-            font-size: 1.7rem;
-        }
-    }
-
-}
-
-@media (min-width: 1400px){
-
-    footer {
-        column-gap: 45%;
-        p{
-            font-size: 1.6rem;
-        } 
-        #slogan {
-            font-size: 1.9rem;
-        }
-    }
-    
 }

@@ -1,0 +1,127 @@
+
+#mainIndex{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    row-gap: 2vh;
+    #hero {
+        z-index: 1;
+        height: 90vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        @media (orientation: portrait){
+            background-image: url(../Images/hero-01.png);
+            background-position: bottom;
+            background-size: contain;
+        }
+        @media (orientation: landscape){
+            background-image: url(../Images/hero-02.png);
+            background-position: center;
+            background-size: 70%;
+        }
+    }
+    #info{
+        display: grid;
+        align-content: center;
+        @media (orientation: portrait){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            padding: 5vh 5vw;
+            row-gap: 10vh;
+        }
+        @media (orientation: landscape){
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 5vw;
+            row-gap: 10vh;
+        }
+        div{
+            p{
+                font-style: italic;
+                text-align: center;
+                z-index: 1;
+                font-weight: 500;
+            }
+            iframe{
+                z-index: 1;
+                border-radius: 20px;
+                max-width: 35vw;
+                max-height: 50vw;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+        }
+        #recipes{
+            @media (orientation: portrait){
+                grid-row: 1;
+                grid-column: 1;
+            }
+            @media (orientation: landscape){
+                grid-row: 1;
+                grid-column: 1;
+                div{ //carousel
+                    z-index: 1;
+                    border-radius: 20px;
+                }
+            }
+        }
+        #maps{
+            @media (orientation: portrait){
+                grid-row: 2;
+                grid-column: 1;
+                iframe{
+                    min-height: 93.5%;
+                    min-width: 100%;
+                }
+            }
+            @media (orientation: landscape){
+                grid-row: 1;
+                grid-column: 2;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                iframe{
+                    min-height: 93.5%;
+                }
+            }
+        }
+        #videoCafe{
+            p{
+                text-align: justify;
+            }
+            @media (orientation: portrait){
+                grid-row: 3;
+                grid-column: 1;
+                height: auto;
+                iframe{
+                    min-width: 100%;
+                }
+            }
+            @media (orientation: landscape){
+                grid-row: 2;
+                grid-column: 1 / span 2;
+                p{
+                    padding: 0vh 3vw;
+                }
+                iframe{
+                    height: 80%;
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+}
+
+@media (min-width: 1400px){
+}

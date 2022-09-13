@@ -1,7 +1,8 @@
+
 #navbar {
     z-index: 3;
     grid-row: 1;
-    width: 100vw;
+    max-width: 100vw;
     top: 0%;
     left: 0%;
     padding: 0.5vh 2vw;
@@ -71,12 +72,6 @@
                         padding: 0px;
                         li {
                             list-style-type: none;
-                            a{
-                                img {
-                                    max-height: 25px;
-                                    min-width: 23px;
-                                }
-                            }
                         }
                     }
                 }
@@ -88,7 +83,6 @@
         }
     }       
     #logoHome {
-        width: 40%;
         height: 100%;
         text-decoration: none;
         display: flex;
@@ -107,46 +101,18 @@
     }
 }
 
-@media (min-width: 576px) and (max-width: 768px){
+@media (orientation: portrait){
 
     #navbar {
-        column-gap: 60vw;
         .dropMenu {
             #dropButton {
                 #menu {
                     .sections {
                         #formasContacto {
                             li {
-                                a{
-                                    img {
-                                        max-height: 45px;
-                                        min-width: 40px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 992px){
-
-    #navbar {
-        .dropMenu {
-            #dropButton {
-                #menu {
-                    top: 6.6vh;
-                    .sections {
-                        #formasContacto {
-                            li {
-                                a{
-                                    img {
-                                        max-height: 50px;
-                                        min-width: 45px;
-                                    }
+                                img{
+                                    height: auto;
+                                    width: 4vh;
                                 }
                             }
                         }
@@ -156,78 +122,83 @@
         }
     }
 
-}
+    @media (min-width: 576px) and (max-width: 768px){
 
-@media (min-width: 992px) and (max-width: 1200px){
-
-    #navbar {
-        column-gap: 60vw;
-        .dropMenu {
-            #dropButton {
-                #menu {
-                    .sections {
-                        #formasContacto {
-                            li {
-                                a{
-                                    img {
-                                        max-height: 50px;
-                                        min-width: 45px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                &:hover #menu{
-                    transform: translateX(42.9vw);
-                }
-            }
+        #navbar {
+            column-gap: 60vw;
         }
     }
 
-}
+    @media (min-width: 768px) and (max-width: 992px){
 
-@media (min-width: 1200px) and (max-width: 1400px){
-
-    #navbar {
-        column-gap: 60vw;
-        .dropMenu {
-            #dropButton {
-                #menu {
-                    .sections {
-                        #formasContacto {
-                            li {
-                                a{
-                                    img {
-                                        max-height: 70px;
-                                        min-width: 65px;
-                                    }
-                                }
-                            }
-                        }
+        #navbar {
+            .dropMenu {
+                #dropButton {
+                    #menu {
+                        top: 6.6vh;
                     }
                 }
             }
         }
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px){
+
+        #navbar {
+            column-gap: 60vw;
+            .dropMenu {
+                #dropButton {
+                    &:hover #menu{
+                        transform: translateX(42.9vw);
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 1200px) and (max-width: 1400px){
+
+        #navbar {
+            column-gap: 60vw;
+        }
+
+    }
+
+    @media (min-width: 1400px){
+
+        #navbar {
+            column-gap: 60vw;
+            .dropMenu {
+                #dropButton {
+                    #menu {
+                        width: 30vw;
+                        left: -30vw;
+                    }
+                    &:hover #menu{
+                        transform: translateX(27.6vw);
+                    }
+                }
+            }
+        }
+        
     }
 
 }
 
-@media (min-width: 1400px){
+@media (orientation: landscape){
 
     #navbar {
-        column-gap: 60vw;
         .dropMenu {
             #dropButton {
                 #menu {
                     .sections {
                         #formasContacto {
                             li {
-                                a{
-                                    img {
-                                        max-height: 75px;
-                                        min-width: 70px;
-                                    }
+                                img{
+                                    width: auto;
+                                    height: 5vh;
                                 }
                             }
                         }
@@ -236,5 +207,68 @@
             }
         }
     }
-    
+
+    @media (min-width: 576px) and (max-width: 768px){
+
+        #navbar {
+            column-gap: 60vw;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px){
+
+        #navbar {
+            .dropMenu {
+                #dropButton {
+                    #menu {
+                        top: 6.6vh;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px){
+
+        #navbar {
+            column-gap: 60vw;
+            .dropMenu {
+                #dropButton {
+                    &:hover #menu{
+                        transform: translateX(42.9vw);
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 1200px) and (max-width: 1400px){
+
+        #navbar {
+            column-gap: 60vw;
+        }
+
+    }
+
+    @media (min-width: 1400px){
+
+        #navbar {
+            column-gap: 60vw;
+            .dropMenu {
+                #dropButton {
+                    #menu {
+                        width: 28vw;
+                        left: -30vw;
+                    }
+                    &:hover #menu{
+                        transform: translateX(27.6vw);
+                    }
+                }
+            }
+        }
+        
+    }
+
 }

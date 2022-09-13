@@ -1,0 +1,32 @@
+
+
+#mainContacto{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2vh;
+    padding: 5.5%;
+    min-height: 80vh !important;
+    h1{
+        text-align: center !important;
+        color: $brown2;
+        font-weight: normal;
+        margin: 5vh 0vw;
+        @media (orientation: portrait){
+            font-size: 10vw !important;
+        }
+        @media (orientation: landscape){
+            font-size: 10vh !important;
+        }
+        &:hover{
+            animation-play-state: paused !important;
+        }
+    }
+    p{
+        text-align: justify;
+    }
+    fieldset{
+        background-color: #E8E9EB;
+        border-radius: 20px;
+        border: none;        
+    }
+}

@@ -1,0 +1,169 @@
+
+#mainCafe{
+    h1{
+        color: $brown2;
+        margin: 5vh 0vw;
+        font-weight: normal;
+        text-align: left !important;
+        @media (orientation: portrait){
+            font-size: 10vw !important;
+        }
+        @media (orientation: landscape){
+            font-size: 10vh !important;
+        }
+        &:hover{
+            animation-play-state: paused !important;
+        }
+    }
+    h3{
+        width: 100%;
+        text-align: left !important;
+    }
+    h4{
+        width: 100%;
+        text-align: left !important;
+    }
+    p{
+        text-align: justify;
+    }
+    li{
+        list-style: none;
+        text-align: justify !important;
+    }
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (orientation: portrait){
+        padding: 5vh 5vw;
+        row-gap: 5vh;
+        section{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            row-gap: 2vh;
+            .carousel{
+                width: 100%;
+                p{
+                    padding: 1vh 0vw !important;
+                    margin: 0px !important;
+                    font-size: 3vw !important;
+                }
+            }
+        }
+    }
+    @media (orientation: landscape){
+        row-gap: 5vh;
+        #us{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: column nowrap;
+            @media (min-width: 768px){
+                flex-flow: row nowrap;
+                column-gap: 5vw;
+                p{
+                    width: 60%;
+                }
+                .carousel{
+                    width: 40%;
+                }
+            }
+        }
+        #coffeePlant{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: column nowrap;
+            @media (min-width: 768px){
+                flex-flow: row wrap;
+                column-gap: 5vw;
+                h4{
+                    width: 100%;
+                }
+                p{
+                    width: 100%;
+                }
+                section{
+                    width: 100%;
+                    div{
+                        div{
+                            padding-left: 1vw !important;
+                        }
+                        .split{
+                            padding-right: 1vw;
+                            padding-left: 0vw;
+                            border-right: solid 0.2vw $brown2
+                        }
+                    }
+                }
+                .carousel{
+                    width: 45%;
+                }
+            }
+        }
+        #drying{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: column nowrap;
+            @media (min-width: 768px){
+                flex-flow: row wrap;
+                column-gap: 5vw;
+                p{
+                    width: 100%;
+                }
+                ul{
+                    width: 50%;
+                }
+                div{
+                    width: 40%;
+                    .container{
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        #greenBean{
+            max-width: 70%;
+        }
+        #toasting{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: column nowrap;
+            @media (min-width: 768px){
+                flex-flow: row nowrap;
+                gap: 5vw;
+                p{
+                    width: 65%;
+                }
+                .carousel{
+                    width: 35%;
+                }
+            }
+        }
+        #toasted{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: column nowrap;
+            @media (min-width: 768px){
+                flex-flow: row nowrap;
+                gap: 5vw;
+            }
+        }
+        #barista{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 5vw;
+            @media (min-width: 768px){
+                flex-flow: row nowrap;
+                p{
+                    width: 50%;
+                }
+                .carousel{
+                    max-width: 40%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+
+#mainSuscription{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2vh;
+    padding: 5.5%;
+    h1{
+        text-align: center !important;
+        color: $brown2;
+        font-weight: normal;
+        margin: 5vh 0vw;
+        @media (orientation: portrait){
+            font-size: 10vw !important;
+        }
+        @media (orientation: landscape){
+            font-size: 10vh !important;
+        }
+        &:hover{
+            animation-play-state: paused !important;
+        }
+    }
+    p{
+        text-align: justify;
+    }
+    #adress{
+        border-radius: 20px;
+        border:solid 0.2vh $brown2;
+    }
+    #coffeeQuant{
+        background-color: whitesmoke;
+        border-radius: 20px;
+    }
+    #coffeeQuant:focus {
+        border: 3px solid $gold !important;
+    }
+}
