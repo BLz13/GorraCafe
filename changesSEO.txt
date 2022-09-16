@@ -1,0 +1,10 @@
+﻿Cambios en SEO:
+
+
+* Se cambiaron las etiquetas meta de “title”, “description” y “keywords”.
+
+
+* Se agregó un archivo sitemap en la raíz.
+
+
+* Se revisaron errores de gramática en todos los textos de la página web.
