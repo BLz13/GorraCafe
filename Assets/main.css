@@ -29,26 +29,17 @@ main {
   font-family: 'Quicksand';
   overflow-x: hidden; }
 
-h1 {
+.mainTitle, .secondaryTitle {
   color: #E8E9EB;
   text-align: right;
   text-transform: capitalize; }
-  h1:hover {
-    animation-name: hoveringText;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-fill-mode: both; }
 
-h2 {
-  color: #E8E9EB;
-  text-align: right; }
-  h2:hover {
-    animation-name: hoveringText;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-fill-mode: both; }
+.secondaryTitle:hover {
+  animation-name: hoveringText;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: both; }
 
 h3 {
   color: #240D05;
@@ -92,11 +83,11 @@ input {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19) !important; }
 
 legend {
-  color: #361307;
+  color: #240D05;
   font-weight: lighter; }
 
 fieldset {
-  background-color: #E8E9EB;
+  background-color: #D6DBDF;
   border: none;
   display: flex;
   flex-flow: column nowrap;
@@ -105,7 +96,7 @@ fieldset {
   padding: 5% !important; }
 
 label {
-  color: #361307;
+  color: #240D05;
   font-weight: lighter; }
 
 select {
@@ -121,8 +112,8 @@ textarea {
   border-radius: 20px !important;
   padding: 5% 2% !important;
   box-sizing: border-box;
-  border: 2px solid whitesmoke;
-  background-color: whitesmoke;
+  border: 2px solid #D6DBDF;
+  background-color: #D6DBDF;
   resize: none; }
   textarea:focus {
     border: 3px solid #D19C1D !important;
@@ -149,14 +140,15 @@ textarea {
   height: 0.5vh !important; }
 
 .polaroid {
-  background-color: white;
+  background-color: #D6DBDF;
   border-radius: 10px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  padding: 2vh 3vw; }
+  padding: 2vh; }
   .polaroid img {
     max-width: 100%;
     max-height: 50vh; }
   .polaroid .container .black-caption {
+    padding-top: 1vh;
     width: 100% !important;
     font-family: "Josefin Slab";
     font-weight: 500;
@@ -319,6 +311,12 @@ textarea {
       #navbar #logoHome img:hover {
         height: 10vh;
         width: auto; }
+    #navbar #logoHome h1:hover {
+      animation-name: hoveringText;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      animation-fill-mode: both; }
 
 @media (orientation: portrait) {
   #navbar .dropMenu #dropButton #menu .sections #formasContacto li img {
@@ -496,7 +494,7 @@ footer {
         grid-row: 2;
         grid-column: 1; }
         #mainIndex #info #maps iframe {
-          min-height: 93.5%;
+          min-height: 94.5%;
           min-width: 100%; } }
     @media (orientation: landscape) {
       #mainIndex #info #maps {
@@ -506,7 +504,7 @@ footer {
         flex-flow: column nowrap;
         align-items: center; }
         #mainIndex #info #maps iframe {
-          min-height: 93.5%; } }
+          min-height: 94.5%; } }
     #mainIndex #info #videoCafe p {
       text-align: justify; }
     @media (orientation: portrait) {
@@ -542,8 +540,6 @@ footer {
     @media (orientation: landscape) {
       #mainCafe h1 {
         font-size: 10vh !important; } }
-    #mainCafe h1:hover {
-      animation-play-state: paused !important; }
   #mainCafe h3 {
     width: 100%;
     text-align: left !important; }
@@ -570,27 +566,42 @@ footer {
           #mainCafe section .carousel p {
             padding: 1vh 0vw !important;
             margin: 0px !important;
-            font-size: 3vw !important; } }
+            font-size: 3vw !important; }
+      #mainCafe #barista h4 {
+        width: 55%; }
+      #mainCafe #barista p {
+        width: 55%; }
+      #mainCafe #barista .carousel {
+        overflow: hidden;
+        width: 55%;
+        height: 40vh; }
+        #mainCafe #barista .carousel img {
+          margin-top: -350px; } }
   @media (orientation: landscape) {
     #mainCafe {
       row-gap: 5vh; }
       #mainCafe #us {
         display: flex;
+        flex-flow: column nowrap;
         justify-content: space-evenly;
-        flex-flow: column nowrap; } }
+        align-items: center; } }
     @media (orientation: landscape) and (min-width: 768px) {
       #mainCafe #us {
         flex-flow: row nowrap;
         column-gap: 5vw; }
-        #mainCafe #us p {
-          width: 60%; }
         #mainCafe #us .carousel {
-          width: 40%; } }
+          width: 30%;
+          border-radius: 20px; }
+          #mainCafe #us .carousel img {
+            border-radius: 20px; }
+        #mainCafe #us p {
+          width: 60%; } }
   @media (orientation: landscape) {
       #mainCafe #coffeePlant {
         display: flex;
+        flex-flow: column nowrap;
         justify-content: space-evenly;
-        flex-flow: column nowrap; } }
+        align-items: center; } }
     @media (orientation: landscape) and (min-width: 768px) {
       #mainCafe #coffeePlant {
         flex-flow: row wrap;
@@ -612,8 +623,9 @@ footer {
   @media (orientation: landscape) {
       #mainCafe #drying {
         display: flex;
+        flex-flow: column nowrap;
         justify-content: space-evenly;
-        flex-flow: column nowrap; } }
+        align-items: center; } }
     @media (orientation: landscape) and (min-width: 768px) {
       #mainCafe #drying {
         flex-flow: row wrap;
@@ -628,42 +640,61 @@ footer {
             width: 100% !important; } }
   @media (orientation: landscape) {
       #mainCafe #greenBean {
-        max-width: 70%; }
+        width: 100%;
+        height: 30vh;
+        overflow: hidden; }
+        #mainCafe #greenBean img {
+          margin-top: -50%; }
       #mainCafe #toasting {
-        display: flex;
-        justify-content: space-evenly;
-        flex-flow: column nowrap; } }
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 10vh auto auto;
+        row-gap: 0;
+        column-gap: 5vh; } }
     @media (orientation: landscape) and (min-width: 768px) {
       #mainCafe #toasting {
-        flex-flow: row nowrap;
-        gap: 5vw; }
-        #mainCafe #toasting p {
-          width: 65%; }
+        flex-flow: row nowrap; }
+        #mainCafe #toasting h4 {
+          grid-row: 1;
+          grid-column: 1 / span 2; }
+        #mainCafe #toasting #p1 {
+          grid-row: 2;
+          grid-column: 1; }
         #mainCafe #toasting .carousel {
-          width: 35%; } }
+          margin-top: -4vh;
+          grid-row: 2;
+          grid-column: 2; }
+        #mainCafe #toasting #p2 {
+          grid-row: 3;
+          grid-column: 1 / span 2; } }
   @media (orientation: landscape) {
       #mainCafe #toasted {
-        display: flex;
-        justify-content: space-evenly;
-        flex-flow: column nowrap; } }
-    @media (orientation: landscape) and (min-width: 768px) {
-      #mainCafe #toasted {
-        flex-flow: row nowrap;
-        gap: 5vw; } }
-  @media (orientation: landscape) {
-      #mainCafe #barista {
         display: flex;
         flex-flow: column nowrap;
-        align-items: center;
         justify-content: space-evenly;
-        gap: 5vw; } }
+        align-items: center; } }
     @media (orientation: landscape) and (min-width: 768px) {
-      #mainCafe #barista {
-        flex-flow: row nowrap; }
-        #mainCafe #barista p {
-          width: 50%; }
-        #mainCafe #barista .carousel {
-          max-width: 40%; } }
+      #mainCafe #toasted {
+        flex-flow: row nowrap;
+        gap: 5vw; } }
+  @media (orientation: landscape) and (min-width: 768px) {
+    #mainCafe #barista {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 10vh auto;
+      row-gap: 0;
+      padding-bottom: 5vh;
+      column-gap: 5vh; }
+      #mainCafe #barista h4 {
+        grid-row: 1;
+        grid-column: 1; }
+      #mainCafe #barista p {
+        grid-row: 2;
+        grid-column: 1; }
+      #mainCafe #barista .carousel {
+        overflow: hidden;
+        grid-row: 1 / span 2;
+        grid-column: 2; } }
 
 #mainCarta {
   display: flex;
@@ -683,8 +714,6 @@ footer {
     @media (orientation: landscape) {
       #mainCarta h1 {
         font-size: 10vh !important; } }
-    #mainCarta h1:hover {
-      animation-play-state: paused !important; }
   #mainCarta .titles {
     height: 30vh;
     border-top: 0.15vh solid #000000;
@@ -769,15 +798,12 @@ footer {
     @media (orientation: landscape) {
       #mainSuscription h1 {
         font-size: 10vh !important; } }
-    #mainSuscription h1:hover {
-      animation-play-state: paused !important; }
   #mainSuscription p {
     text-align: justify; }
   #mainSuscription #adress {
     border-radius: 20px;
     border: solid 0.2vh #240D05; }
   #mainSuscription #coffeeQuant {
-    background-color: whitesmoke;
     border-radius: 20px; }
   #mainSuscription #coffeeQuant:focus {
     border: 3px solid #D19C1D !important; }
@@ -799,11 +825,9 @@ footer {
     @media (orientation: landscape) {
       #mainContacto h1 {
         font-size: 10vh !important; } }
-    #mainContacto h1:hover {
-      animation-play-state: paused !important; }
   #mainContacto p {
     text-align: justify; }
   #mainContacto fieldset {
-    background-color: #E8E9EB;
+    background-color: #D6DBDF;
     border-radius: 20px;
     border: none; }

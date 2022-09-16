@@ -8,7 +8,7 @@
     padding-top: 5vh !important;
     padding-bottom: 5vh !important;
     h1{
-        color: $brown2;
+        color: map-get($colours, brown2);
         font-family: 'Neonderthaw' !important;
         font-weight: normal;
         text-align: center !important;
@@ -17,9 +17,6 @@
         }
         @media (orientation: landscape){
             font-size: 10vh !important;
-        }
-        &:hover{
-            animation-play-state: paused !important;
         }
     }
     .titles{
@@ -36,7 +33,7 @@
             }
         }
         @media (min-width: 768px){
-            border: 0.15vh solid $brown2;
+            border: 0.15vh solid map-get($colours, brown2);
             border-radius: 20px;
         }
         height: 30vh;
@@ -46,7 +43,7 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         h3{
-            color: $brown2;
+            color: map-get($colours, brown2);
             padding-top: 2vh;
             padding-right: 2vw;
             text-align: right;

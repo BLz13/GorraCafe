@@ -1,7 +1,13 @@
+@mixin flex-column-evenly-center {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 #mainCafe{
     h1{
-        color: $brown2;
+        color: map-get($colours, brown2);
         margin: 5vh 0vw;
         font-weight: normal;
         text-align: left !important;
@@ -10,9 +16,6 @@
         }
         @media (orientation: landscape){
             font-size: 10vh !important;
-        }
-        &:hover{
-            animation-play-state: paused !important;
         }
     }
     h3{
@@ -30,18 +33,12 @@
         list-style: none;
         text-align: justify !important;
     }
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex-column-evenly-center;
     @media (orientation: portrait){
         padding: 5vh 5vw;
         row-gap: 5vh;
         section{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-evenly;
-            align-items: center;
+            @include flex-column-evenly-center;
             row-gap: 2vh;
             .carousel{
                 width: 100%;
@@ -52,28 +49,44 @@
                 }
             }
         }
+        #barista{
+            h4{
+                width: 55%;
+            }
+            p{
+                width: 55%;
+            }
+            .carousel{
+                overflow: hidden;
+                width: 55%;
+                height: 40vh;
+                img{                        
+                    margin-top: -350px;
+                }
+            }
+        }
     }
     @media (orientation: landscape){
         row-gap: 5vh;
         #us{
-            display: flex;
-            justify-content: space-evenly;
-            flex-flow: column nowrap;
+            @include flex-column-evenly-center;
             @media (min-width: 768px){
                 flex-flow: row nowrap;
                 column-gap: 5vw;
+                .carousel{
+                    width: 30%;
+                    border-radius: 20px;
+                    img{
+                        border-radius: 20px;
+                    }
+                }
                 p{
                     width: 60%;
-                }
-                .carousel{
-                    width: 40%;
                 }
             }
         }
         #coffeePlant{
-            display: flex;
-            justify-content: space-evenly;
-            flex-flow: column nowrap;
+            @include flex-column-evenly-center;
             @media (min-width: 768px){
                 flex-flow: row wrap;
                 column-gap: 5vw;
@@ -92,7 +105,7 @@
                         .split{
                             padding-right: 1vw;
                             padding-left: 0vw;
-                            border-right: solid 0.2vw $brown2
+                            border-right: solid 0.2vw map-get($colours, brown2)
                         }
                     }
                 }
@@ -102,9 +115,7 @@
             }
         }
         #drying{
-            display: flex;
-            justify-content: space-evenly;
-            flex-flow: column nowrap;
+            @include flex-column-evenly-center;
             @media (min-width: 768px){
                 flex-flow: row wrap;
                 column-gap: 5vw;
@@ -123,45 +134,67 @@
             }
         }
         #greenBean{
-            max-width: 70%;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            img{
+                margin-top: -50%;
+            }
         }
         #toasting{
-            display: flex;
-            justify-content: space-evenly;
-            flex-flow: column nowrap;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 10vh auto auto;
+            row-gap: 0;
+            column-gap: 5vh;
             @media (min-width: 768px){
                 flex-flow: row nowrap;
-                gap: 5vw;
-                p{
-                    width: 65%;
+                h4{
+                    grid-row: 1;
+                    grid-column: 1 / span 2;
+                }
+                #p1{
+                    grid-row: 2;
+                    grid-column: 1;
                 }
                 .carousel{
-                    width: 35%;
+                    margin-top: -4vh;
+                    grid-row: 2;
+                    grid-column: 2;
+                }
+                #p2{
+                    grid-row: 3;
+                    grid-column: 1 / span 2;
                 }
             }
         }
         #toasted{
-            display: flex;
-            justify-content: space-evenly;
-            flex-flow: column nowrap;
+            @include flex-column-evenly-center;
             @media (min-width: 768px){
                 flex-flow: row nowrap;
                 gap: 5vw;
             }
         }
         #barista{
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
-            justify-content: space-evenly;
-            gap: 5vw;
             @media (min-width: 768px){
-                flex-flow: row nowrap;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: 10vh auto;
+                row-gap: 0;
+                padding-bottom: 5vh;
+                column-gap: 5vh;
+                h4{
+                    grid-row: 1;
+                    grid-column: 1;
+                }
                 p{
-                    width: 50%;
+                    grid-row: 2;
+                    grid-column: 1;
                 }
                 .carousel{
-                    max-width: 40%;
+                    overflow: hidden;
+                    grid-row: 1 / span 2;
+                    grid-column: 2;
                 }
             }
         }

@@ -13,7 +13,7 @@
 }
 
 @keyframes hoveringText {
-    to {color: $gold;}
+    to {color: map-get($colours, gold);}
 }
 
 body {
@@ -24,27 +24,19 @@ body {
 
 main {
     grid-row: 2;
-    background-color: $background;
+    background-color: map-get($colours, background);
     font-family: 'Quicksand';
     overflow-x: hidden;
 }
 
-h1 {
-    color: $platinum;
+.mainTitle {
+    color: map-get($colours, platinum);
     text-align: right;
     text-transform: capitalize;
-    &:hover{
-        animation-name: hoveringText;
-        animation-duration: 1s;
-        animation-direction: alternate;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
 }
 
-h2{
-    color: $platinum;
-    text-align: right;
+.secondaryTitle{
+    @extend .mainTitle;
     &:hover{
         animation-name: hoveringText;
         animation-duration: 1s;
@@ -55,31 +47,31 @@ h2{
 }
 
 h3{
-    color: $brown2;
+    color: map-get($colours, brown2);
     text-transform: capitalize;
     font-weight: bolder;
 }
 
 h4{
-    color: $brown2;
+    color: map-get($colours, brown2);
     text-transform: capitalize;
     font-weight: bolder;
 }
 
 h5{
-    color: $brown2;
+    color: map-get($colours, brown2);
     text-transform: capitalize;
     font-weight: bolder;
 }
 
 h6{
-    color: $platinum;
+    color: map-get($colours, platinum);
     text-align: left;
     font-weight: 400 !important;
 }
 
 p{
-    color: $brown2;
+    color: map-get($colours, brown2);
 }
 
 // forms stuff
@@ -97,22 +89,22 @@ form{
 input{
     border-radius: 20px !important;
     height: 5vh !important;
-    color: $brown2;
+    color: map-get($colours, brown2);
 }
 
 .form-control:focus { //changes the blueish focus on forms
-    border-color: $gold !important;
+    border-color:  map-get($colours, gold) !important;
     -webkit-box-shadow: none !important;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
 }
 
 legend{
-    color: #361307;
+    color:  map-get($colours, brown2);
     font-weight: lighter;
 }
 
 fieldset{
-    background-color: #E8E9EB;
+    background-color:  map-get($colours, background);
     border: none;
     display: flex;
     flex-flow: column nowrap;
@@ -122,14 +114,14 @@ fieldset{
 }
 
 label{
-    color: #361307;
+    color: map-get($colours, brown2);
     font-weight: lighter;
 }
 
 select{
     overflow: hidden;
     &:focus{
-        border-color: $gold !important;
+        border-color:  map-get($colours, gold) !important;
         -webkit-box-shadow: none !important;
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
     }
@@ -141,11 +133,11 @@ textarea{
     border-radius: 20px !important;
     padding: 5% 2% !important;
     box-sizing: border-box;
-    border: 2px solid whitesmoke;
-    background-color: whitesmoke;
+    border: 2px solid  map-get($colours, background);
+    background-color:  map-get($colours, background);
     resize: none;
     &:focus{
-        border: 3px solid #D19C1D !important;
+        border: 3px solid  map-get($colours, gold) !important;
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
 }
@@ -154,14 +146,14 @@ textarea{
     width: 30%;
     border-radius: 8px;
     transition-duration: 0.2s;
-    border: 0.3vh $gold;
+    border: 0.3vh map-get($colours, gold);
     border: none;
-    color: $gold;
+    color: map-get($colours, gold);
     text-decoration: none;
     cursor: pointer;
     &:hover {
-        background-color: $gold;
-        color: $platinum;
+        background-color:  map-get($colours, gold);
+        color:  map-get($colours, platinum);
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
 }
@@ -177,22 +169,23 @@ textarea{
 }
 
 .polaroid{
-    background-color: white;
+    background-color:  map-get($colours, background);
     border-radius: 10px;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    padding: 2vh 3vw;
+    padding: 2vh;
     img{
         max-width: 100%;
         max-height: 50vh;
     }
     .container{
         .black-caption{
+            padding-top: 1vh;
             width: 100% !important;
             font-family: $titles;
             font-weight: 500;
             text-align: center !important;
             text-transform: capitalize;
-            color: $brown2;
+            color:  map-get($colours, brown2);
         }
     }
 }

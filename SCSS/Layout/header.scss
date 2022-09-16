@@ -7,7 +7,7 @@
     left: 0%;
     padding: 0.5vh 2vw;
     column-gap: 50vw;
-    background-color: $brown1;
+    background-color:  map-get($colours, brown1);
     position: sticky;
     display: flex;
     flex-flow: row nowrap;
@@ -37,7 +37,7 @@
                 padding: 2vh 2vw;
                 overflow: hidden;
                 position: absolute;
-                background-color: $brown2;
+                background-color:  map-get($colours, brown2);
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: flex-start;
@@ -96,6 +96,15 @@
             &:hover{
                 height: 10vh;
                 width: auto;
+            }
+        }
+        h1{
+            &:hover{
+                animation-name: hoveringText;
+                animation-duration: 1s;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+                animation-fill-mode: both;
             }
         }
     }

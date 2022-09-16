@@ -6,7 +6,7 @@
     padding: 5.5%;
     h1{
         text-align: center !important;
-        color: $brown2;
+        color: map-get($colours, brown2);
         font-weight: normal;
         margin: 5vh 0vw;
         @media (orientation: portrait){
@@ -15,22 +15,18 @@
         @media (orientation: landscape){
             font-size: 10vh !important;
         }
-        &:hover{
-            animation-play-state: paused !important;
-        }
     }
     p{
         text-align: justify;
     }
     #adress{
         border-radius: 20px;
-        border:solid 0.2vh $brown2;
+        border:solid 0.2vh map-get($colours, brown2);
     }
     #coffeeQuant{
-        background-color: whitesmoke;
         border-radius: 20px;
     }
     #coffeeQuant:focus {
-        border: 3px solid $gold !important;
+        border: 3px solid map-get($colours, gold) !important;
     }
 }
