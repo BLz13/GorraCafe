@@ -2,6 +2,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 100%;
     animation-duration: 2s;
     animation-name: starting;
     font-family: $primaryTypo;
@@ -14,6 +15,26 @@
 
 @keyframes hoveringText {
     to {color: map-get($colours, gold);}
+}
+
+@media (orientation: landscape){
+    
+    @keyframes hoveringButton {
+        
+        to {width: 4.5vw;}
+
+    }
+
+}
+
+@media (orientation: portrait){
+    
+    @keyframes hoveringButton {
+        
+        to {width: 4.5vh;}
+
+    }
+
 }
 
 body {
@@ -33,6 +54,7 @@ main {
     color: map-get($colours, platinum);
     text-align: right;
     text-transform: capitalize;
+    font-size: 2.5rem;
 }
 
 .secondaryTitle{
@@ -50,28 +72,29 @@ h3{
     color: map-get($colours, brown2);
     text-transform: capitalize;
     font-weight: bolder;
+    font-size: 1.8rem;
+    font-family: $titles;
 }
 
 h4{
     color: map-get($colours, brown2);
     text-transform: capitalize;
     font-weight: bolder;
+    font-size: 1.6rem;
+    font-family: $titles;
 }
 
 h5{
     color: map-get($colours, brown2);
     text-transform: capitalize;
     font-weight: bolder;
-}
-
-h6{
-    color: map-get($colours, platinum);
-    text-align: left;
-    font-weight: 400 !important;
+    font-size: 1.4rem;
+    font-family: $titles;
 }
 
 p{
     color: map-get($colours, brown2);
+    font-size: 1rem;
 }
 
 // forms stuff
@@ -90,6 +113,7 @@ input{
     border-radius: 20px !important;
     height: 5vh !important;
     color: map-get($colours, brown2);
+    font-size: 1rem;
 }
 
 .form-control:focus { //changes the blueish focus on forms
@@ -101,6 +125,7 @@ input{
 legend{
     color:  map-get($colours, brown2);
     font-weight: lighter;
+    font-size: 1rem;
 }
 
 fieldset{
@@ -115,7 +140,9 @@ fieldset{
 
 label{
     color: map-get($colours, brown2);
-    font-weight: lighter;
+    font-family: $titles;
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
 select{
@@ -128,10 +155,10 @@ select{
 }
 
 textarea{
+    font-size: 1rem;
     height: 30vh !important;
     border-radius: 4px;
     border-radius: 20px !important;
-    padding: 5% 2% !important;
     box-sizing: border-box;
     border: 2px solid  map-get($colours, background);
     background-color:  map-get($colours, background);
@@ -192,58 +219,6 @@ textarea{
 
 @media (orientation: portrait){
     
-    h1 {
-        font-size: 7vw !important;
-    }
-
-    h2{
-        font-size: 7vw !important;
-    }
-
-    h3{
-        font-size: 4.5vw !important;
-    }
-
-    h4{
-        font-size: 4.2vw !important;
-    }
-
-    h5{
-        font-size: 4.5vw !important;
-    }
-
-    h6{
-        font-size: 3.5vw !important;
-    }
-
-    p{
-        font-size: 4vw !important;
-    }
-
-    // forms
-
-    input{
-        font-size: 4vw !important;
-    }
-
-    label{
-        font-size: 3.5vw !important;
-    }
-
-    legend{
-        font-size: 3.7vw !important;
-    }
-
-    select{
-        font-size: 3.5vw !important;
-    }
-
-    textarea{
-        font-size: 4vw !important;
-    }
-
-    //forms ends
-
     .icon1 { /*small icons*/
         width: 4.5vw;
         height: auto;
@@ -267,58 +242,6 @@ textarea{
             }
         }
     }
-
-    h1 {
-        font-size: 5vh !important;
-    }
-
-    h2{
-        font-size: 5vh !important;
-    }
-
-    h3{
-        font-size: 4vh !important;
-    }
-
-    h4{
-        font-size: 3.5vh !important;
-    }
-
-    h5{
-        font-size: 3vh !important;
-    }
-
-    h6{
-        font-size: 2vh !important;
-    }
-
-    p{
-        font-size: 2vh !important;
-    }
-
-    //forms
-
-    input{
-        font-size: 2vh !important;
-    }
-
-    label{
-        font-size: 1.5vh !important;
-    }
-
-    legend{
-        font-size: 1.7vh !important;
-    }
-
-    select{
-        font-size: 1.5vh !important;
-    }
-
-    textarea{
-        font-size: 2vh !important;
-    }
-
-    //forms ends
 
     .icon1 { /*small icons*/
         width: 3vh !important;

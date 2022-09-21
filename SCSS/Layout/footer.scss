@@ -16,12 +16,14 @@ footer {
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-        font-weight: lighter;
         text-transform: uppercase;
         color: map-get($colours, brown2);
+        font-family: $titles;
+        font-weight: 400;
         margin: 0px;
         padding: 0px;
         column-gap: 1vw;
+        font-size: 0.8rem;
     }
     #copyright {
         grid-row: 1;
@@ -36,32 +38,6 @@ footer {
         grid-column: 1 / span 2;
         font-size: 1rem;
     } 
-}
-
-@media (orientation: portrait){
-    
-    footer {
-        p{
-            font-size: 2.5vw !important;
-        }
-        #slogan{
-            font-size: 3vw !important;
-        }
-    }
-
-}
-
-@media (orientation: landscape){
-    
-    footer {
-        p{
-            font-size: 1.2vh !important;
-        }
-        #slogan{
-            font-size: 1.7vh !important;
-        }
-    }
-
 }
 
 @media (min-width: 576px){

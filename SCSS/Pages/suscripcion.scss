@@ -9,12 +9,6 @@
         color: map-get($colours, brown2);
         font-weight: normal;
         margin: 5vh 0vw;
-        @media (orientation: portrait){
-            font-size: 10vw !important;
-        }
-        @media (orientation: landscape){
-            font-size: 10vh !important;
-        }
     }
     p{
         text-align: justify;

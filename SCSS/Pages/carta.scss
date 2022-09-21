@@ -12,36 +12,25 @@
         font-family: 'Neonderthaw' !important;
         font-weight: normal;
         text-align: center !important;
-        @media (orientation: portrait){
-            font-size: 20vw !important;
-        }
-        @media (orientation: landscape){
-            font-size: 10vh !important;
-        }
+        font-size: 5rem !important;
     }
     .titles{
-        @media (orientation: portrait){
-            background-size: cover;
-            h3{
-                font-size: 15vw !important;
-            }
-        }
-        @media (orientation: landscape){
-            background-size: contain;
-            h3{
-                font-size: 8vh !important;
-            }
-        }
-        @media (min-width: 768px){
-            border: 0.15vh solid map-get($colours, brown2);
-            border-radius: 20px;
-        }
         height: 30vh;
         border-top: 0.15vh solid #000000;
         border-bottom: 0.15vh solid #000000;
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
+        @media (orientation: portrait){
+            background-size: cover;
+        }
+        @media (orientation: landscape){
+            background-size: contain;
+        }
+        @media (min-width: 768px){
+            border: 0.15vh solid map-get($colours, brown2);
+            border-radius: 20px;
+        }
         h3{
             color: map-get($colours, brown2);
             padding-top: 2vh;
@@ -49,6 +38,7 @@
             text-align: right;
             font-family: 'Neonderthaw' !important;
             font-weight: normal;
+            font-size: 4rem !important;
         }
     }
     #titleCoffee{
@@ -90,29 +80,10 @@
     }
     .footNotes{
         font-weight: lighter;
-        text-align: justify; 
-    }
-    @media (orientation: portrait){
-        .footNotes{
-            font-size: 2vw;
-        }
-    }
-    @media (orientation: landscape){
-        .footNotes{
-            font-size: 2vh;
-        }
+        text-align: justify;
+        font-size: 0.9rem;
     }
     .prices{
         text-align: right;
     }
 }
-
-@media (min-width: 576px) and (max-width: 768px){}
-
-@media (min-width: 768px) and (max-width: 992px){}
-
-@media (min-width: 992px) and (max-width: 1200px){}
-
-@media (min-width: 1200px) and (max-width: 1400px){}
-
-@media (min-width: 1400px){}

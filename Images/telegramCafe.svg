@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375"
+   version="1.1"
+   id="svg155"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="telegramCafe.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview157"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.78127806"
+     inkscape:cx="154.87444"
+     inkscape:cy="254.71085"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs152" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 79.374999,39.687501 c 0,21.918356 -17.769142,39.687498 -39.687498,39.687498 C 17.769144,79.374999 0,61.605857 0,39.687501 0,17.769144 17.769144,0 39.687501,0 61.605857,0 79.374999,17.769144 79.374999,39.687501"
+       style="display:inline;fill:#361307;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0236828"
+       id="path82"
+       inkscape:label="T"
+       inkscape:export-filename="..\Images\TelegramCafe.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g2845"
+       inkscape:label="Telegram"
+       transform="matrix(0.23682719,0,0,-0.23682719,-789.3711,134.86361)">
+      <path
+         d="m 3583.404,499.12111 -174.3054,-80.5164 c -8.5579,-3.9515 -8.9507,-16.6643 -0.6528,-21.2051 l 35.3555,-19.3349 105.2989,77.6216 c 1.0939,0.807 2.2603,-0.1473 2.3207,-1.236 l -88.2194,-89.2329 c -2.1878,-2.216 -3.4268,-5.2837 -3.4268,-8.4923 v -41.3214 c 0,-11.8674 14.7043,-16.248 20.5425,-6.129 l 21.4006,37.1137 45.2792,-24.766 c 6.3821,-3.4904 14.1663,0.269 15.8586,7.6661 l 35.7543,156.3001 c 2.1576,9.4337 -6.8052,17.4136 -15.2059,13.5325"
+         style="display:inline;fill:#e9eaec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0622143"
+         id="path50"
+         inkscape:export-filename="..\Images\TelegramCafe.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+  </g>
+</svg>

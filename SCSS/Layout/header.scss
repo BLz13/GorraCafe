@@ -14,25 +14,32 @@
     justify-content: space-between;
     align-items: center;
     .dropMenu {
-        margin: 3.5vh 0px;
-        height: 3vh;
+        margin: 0px;
+        height: 40%;
         width: auto;
         img {
             width: auto;
             max-height: 95%;
         }
         #dropButton {
-            top: 33%;
-            width: 3vh;
-            height: 3vh;
+            top: 32%;
+            width: 2.35%;
+            height: 35%;
             position: absolute;
             background-color: rgba(255, 255, 255, 0);
             border: none;
             #menu {
-                width: 45vw;
-                height: 90vh;
-                top: 6.7vh;
-                left: -45vw;
+                z-index: 2;
+                @media (orientation: landscape){
+                    width: 30vw;
+                    left: -32vw;
+                }
+                @media (orientation: portrait){
+                    width: 45vw;
+                    left: -47vw;
+                }
+                top: 185%;
+                height: 95vh;
                 opacity: 0;
                 padding: 2vh 2vw;
                 overflow: hidden;
@@ -43,15 +50,20 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 transition: opacity 2s, transform 2s;
+                @media (min-width: 1400px) and (orientation: landscape){
+                    top: -92%;
+                    height: 100vh;
+                }
                 .sections {
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: flex-start;
                     list-style: none;
-                    padding: 0px;
+                    padding: 5% 0px 0px 0px;
                     row-gap: 5vh;
-                    height: 100%;
-                    width: 100%;
+                    @media (min-width: 1400px) and (orientation: landscape){
+                        padding: 10% 0px 0px 0px;
+                    }
                     li a{
                         text-decoration: none;
                     }
@@ -70,15 +82,41 @@
                         flex-flow: row nowrap ;
                         justify-content: space-between;
                         padding: 0px;
+                        column-gap: 5%;
                         li {
                             list-style-type: none;
+                        }
+                        img{
+                            @media (orientation: landscape){
+                                width: 4vw;
+                            }
+                            @media (orientation: portrait){
+                                width: 4vh;
+                            }
+                            width: auto;
+                            &:hover {
+                                animation-name: hoveringButton;
+                                animation-duration: 1s;
+                                animation-direction: alternate;
+                                animation-timing-function: linear;
+                                animation-fill-mode: both;
+                            }
                         }
                     }
                 }
             }
-            &:hover #menu{
-                transform: translateX(42.9vw);
-                opacity: 1;
+            
+            @media (orientation: portrait){
+                &:hover #menu{
+                    transform: translateX(44.7vw);
+                    opacity: 1;
+                }
+            }
+            @media (orientation: landscape){
+                &:hover #menu{
+                    transform: translateX(30vw);
+                    opacity: 1;
+                }
             }
         }
     }       
@@ -90,13 +128,13 @@
         justify-items: flex-start;
         align-items: center;
         img {
-            height: 8vh;
             width: auto;
+            height: 90%;
             transition: height 1s;
             &:hover{
-                height: 10vh;
+                height: 115%;
                 width: auto;
-            }
+            } 
         }
         h1{
             &:hover{
@@ -110,24 +148,23 @@
     }
 }
 
+h6{
+    color: map-get($colours, platinum);
+    text-align: left;
+    font-weight: 400 !important;
+    font-size: 1.5rem !important; 
+}
+
 @media (orientation: portrait){
 
-    #navbar {
-        .dropMenu {
-            #dropButton {
-                #menu {
-                    .sections {
-                        #formasContacto {
-                            li {
-                                img{
-                                    height: auto;
-                                    width: 4vh;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    @media (max-width: 576px){
+    
+        h1{
+            font-size: 1.5rem !important;
+        }
+        
+        h6{
+            font-size: 1rem !important;
         }
     }
 
@@ -136,17 +173,14 @@
         #navbar {
             column-gap: 60vw;
         }
+
     }
 
     @media (min-width: 768px) and (max-width: 992px){
 
         #navbar {
-            .dropMenu {
-                #dropButton {
-                    #menu {
-                        top: 6.6vh;
-                    }
-                }
+            #menu {
+                top: 6.6vh;
             }
         }
 
@@ -156,11 +190,9 @@
 
         #navbar {
             column-gap: 60vw;
-            .dropMenu {
-                #dropButton {
-                    &:hover #menu{
-                        transform: translateX(42.9vw);
-                    }
+            #dropButton {
+                &:hover #menu{
+                    transform: translateX(42.9vw);
                 }
             }
         }
@@ -171,6 +203,9 @@
 
         #navbar {
             column-gap: 60vw;
+            h1{
+                font-size: 5rem;
+            }
         }
 
     }
@@ -179,18 +214,16 @@
 
         #navbar {
             column-gap: 60vw;
-            .dropMenu {
-                #dropButton {
-                    #menu {
-                        width: 30vw;
-                        left: -30vw;
-                    }
-                    &:hover #menu{
-                        transform: translateX(27.6vw);
-                    }
-                }
+            h1{
+                font-size: 5rem;
             }
         }
+
+        h6{
+            
+            font-size: 3rem !important; 
+        }
+        
         
     }
 
@@ -199,85 +232,22 @@
 @media (orientation: landscape){
 
     #navbar {
-        .dropMenu {
-            #dropButton {
-                #menu {
-                    .sections {
-                        #formasContacto {
-                            li {
-                                img{
-                                    width: auto;
-                                    height: 5vh;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        h1{
+            font-size: 2rem;
+        }
+        h6{
+            font-size: 1rem !important;
         }
     }
 
-    @media (min-width: 576px) and (max-width: 768px){
+    @media (min-width: 576px) and (max-width: 768px){}
 
-        #navbar {
-            column-gap: 60vw;
-        }
-    }
+    @media (min-width: 768px) and (max-width: 992px){}
 
-    @media (min-width: 768px) and (max-width: 992px){
+    @media (min-width: 992px) and (max-width: 1200px){}
 
-        #navbar {
-            .dropMenu {
-                #dropButton {
-                    #menu {
-                        top: 6.6vh;
-                    }
-                }
-            }
-        }
+    @media (min-width: 1200px) and (max-width: 1400px){}
 
-    }
-
-    @media (min-width: 992px) and (max-width: 1200px){
-
-        #navbar {
-            column-gap: 60vw;
-            .dropMenu {
-                #dropButton {
-                    &:hover #menu{
-                        transform: translateX(42.9vw);
-                    }
-                }
-            }
-        }
-
-    }
-
-    @media (min-width: 1200px) and (max-width: 1400px){
-
-        #navbar {
-            column-gap: 60vw;
-        }
-
-    }
-
-    @media (min-width: 1400px){
-
-        #navbar {
-            column-gap: 60vw;
-            .dropMenu {
-                #dropButton {
-                    #menu {
-                        width: 28vw;
-                        left: -30vw;
-                    }
-                    &:hover #menu{
-                        transform: translateX(27.6vw);
-                    }
-                }
-            }
-        }
-        
-    }
+    @media (min-width: 1400px){}
 
 }

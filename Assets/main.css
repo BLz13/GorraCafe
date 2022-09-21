@@ -4,6 +4,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-size: 100%;
   animation-duration: 2s;
   animation-name: starting;
   font-family: "Quicksand"; }
@@ -17,6 +18,16 @@
 @keyframes hoveringText {
   to {
     color: #D19C1D; } }
+
+@media (orientation: landscape) {
+  @keyframes hoveringButton {
+    to {
+      width: 4.5vw; } } }
+
+@media (orientation: portrait) {
+  @keyframes hoveringButton {
+    to {
+      width: 4.5vh; } } }
 
 body {
   overflow-x: hidden;
@@ -32,7 +43,8 @@ main {
 .mainTitle, .secondaryTitle {
   color: #E8E9EB;
   text-align: right;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  font-size: 2.5rem; }
 
 .secondaryTitle:hover {
   animation-name: hoveringText;
@@ -44,25 +56,27 @@ main {
 h3 {
   color: #240D05;
   text-transform: capitalize;
-  font-weight: bolder; }
+  font-weight: bolder;
+  font-size: 1.8rem;
+  font-family: "Josefin Slab"; }
 
 h4 {
   color: #240D05;
   text-transform: capitalize;
-  font-weight: bolder; }
+  font-weight: bolder;
+  font-size: 1.6rem;
+  font-family: "Josefin Slab"; }
 
 h5 {
   color: #240D05;
   text-transform: capitalize;
-  font-weight: bolder; }
-
-h6 {
-  color: #E8E9EB;
-  text-align: left;
-  font-weight: 400 !important; }
+  font-weight: bolder;
+  font-size: 1.4rem;
+  font-family: "Josefin Slab"; }
 
 p {
-  color: #240D05; }
+  color: #240D05;
+  font-size: 1rem; }
 
 form {
   display: flex;
@@ -75,7 +89,8 @@ form {
 input {
   border-radius: 20px !important;
   height: 5vh !important;
-  color: #240D05; }
+  color: #240D05;
+  font-size: 1rem; }
 
 .form-control:focus {
   border-color: #D19C1D !important;
@@ -84,7 +99,8 @@ input {
 
 legend {
   color: #240D05;
-  font-weight: lighter; }
+  font-weight: lighter;
+  font-size: 1rem; }
 
 fieldset {
   background-color: #D6DBDF;
@@ -97,7 +113,9 @@ fieldset {
 
 label {
   color: #240D05;
-  font-weight: lighter; }
+  font-family: "Josefin Slab";
+  font-weight: 700;
+  font-size: 0.9rem; }
 
 select {
   overflow: hidden; }
@@ -107,10 +125,10 @@ select {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19) !important; }
 
 textarea {
+  font-size: 1rem;
   height: 30vh !important;
   border-radius: 4px;
   border-radius: 20px !important;
-  padding: 5% 2% !important;
   box-sizing: border-box;
   border: 2px solid #D6DBDF;
   background-color: #D6DBDF;
@@ -157,30 +175,6 @@ textarea {
     color: #240D05; }
 
 @media (orientation: portrait) {
-  h1 {
-    font-size: 7vw !important; }
-  h2 {
-    font-size: 7vw !important; }
-  h3 {
-    font-size: 4.5vw !important; }
-  h4 {
-    font-size: 4.2vw !important; }
-  h5 {
-    font-size: 4.5vw !important; }
-  h6 {
-    font-size: 3.5vw !important; }
-  p {
-    font-size: 4vw !important; }
-  input {
-    font-size: 4vw !important; }
-  label {
-    font-size: 3.5vw !important; }
-  legend {
-    font-size: 3.7vw !important; }
-  select {
-    font-size: 3.5vw !important; }
-  textarea {
-    font-size: 4vw !important; }
   .icon1 {
     /*small icons*/
     width: 4.5vw;
@@ -196,30 +190,6 @@ textarea {
       filter: grayscale(0%); } }
 
 @media (orientation: landscape) {
-  h1 {
-    font-size: 5vh !important; }
-  h2 {
-    font-size: 5vh !important; }
-  h3 {
-    font-size: 4vh !important; }
-  h4 {
-    font-size: 3.5vh !important; }
-  h5 {
-    font-size: 3vh !important; }
-  h6 {
-    font-size: 2vh !important; }
-  p {
-    font-size: 2vh !important; }
-  input {
-    font-size: 2vh !important; }
-  label {
-    font-size: 1.5vh !important; }
-  legend {
-    font-size: 1.7vh !important; }
-  select {
-    font-size: 1.5vh !important; }
-  textarea {
-    font-size: 2vh !important; }
   .icon1 {
     /*small icons*/
     width: 3vh !important;
@@ -240,24 +210,23 @@ textarea {
   justify-content: space-between;
   align-items: center; }
   #navbar .dropMenu {
-    margin: 3.5vh 0px;
-    height: 3vh;
+    margin: 0px;
+    height: 40%;
     width: auto; }
     #navbar .dropMenu img {
       width: auto;
       max-height: 95%; }
     #navbar .dropMenu #dropButton {
-      top: 33%;
-      width: 3vh;
-      height: 3vh;
+      top: 32%;
+      width: 2.35%;
+      height: 35%;
       position: absolute;
       background-color: rgba(255, 255, 255, 0);
       border: none; }
       #navbar .dropMenu #dropButton #menu {
-        width: 45vw;
-        height: 90vh;
-        top: 6.7vh;
-        left: -45vw;
+        z-index: 2;
+        top: 185%;
+        height: 95vh;
         opacity: 0;
         padding: 2vh 2vw;
         overflow: hidden;
@@ -268,15 +237,28 @@ textarea {
         justify-content: flex-start;
         align-items: flex-start;
         transition: opacity 2s, transform 2s; }
+        @media (orientation: landscape) {
+          #navbar .dropMenu #dropButton #menu {
+            width: 30vw;
+            left: -32vw; } }
+        @media (orientation: portrait) {
+          #navbar .dropMenu #dropButton #menu {
+            width: 45vw;
+            left: -47vw; } }
+        @media (min-width: 1400px) and (orientation: landscape) {
+          #navbar .dropMenu #dropButton #menu {
+            top: -92%;
+            height: 100vh; } }
         #navbar .dropMenu #dropButton #menu .sections {
           display: flex;
           flex-flow: column nowrap;
           justify-content: flex-start;
           list-style: none;
-          padding: 0px;
-          row-gap: 5vh;
-          height: 100%;
-          width: 100%; }
+          padding: 5% 0px 0px 0px;
+          row-gap: 5vh; }
+          @media (min-width: 1400px) and (orientation: landscape) {
+            #navbar .dropMenu #dropButton #menu .sections {
+              padding: 10% 0px 0px 0px; } }
           #navbar .dropMenu #dropButton #menu .sections li a {
             text-decoration: none; }
           #navbar .dropMenu #dropButton #menu .sections .buttonText {
@@ -291,12 +273,32 @@ textarea {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
-            padding: 0px; }
+            padding: 0px;
+            column-gap: 5%; }
             #navbar .dropMenu #dropButton #menu .sections #formasContacto li {
               list-style-type: none; }
-      #navbar .dropMenu #dropButton:hover #menu {
-        transform: translateX(42.9vw);
-        opacity: 1; }
+            #navbar .dropMenu #dropButton #menu .sections #formasContacto img {
+              width: auto; }
+              @media (orientation: landscape) {
+                #navbar .dropMenu #dropButton #menu .sections #formasContacto img {
+                  width: 4vw; } }
+              @media (orientation: portrait) {
+                #navbar .dropMenu #dropButton #menu .sections #formasContacto img {
+                  width: 4vh; } }
+              #navbar .dropMenu #dropButton #menu .sections #formasContacto img:hover {
+                animation-name: hoveringButton;
+                animation-duration: 1s;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+                animation-fill-mode: both; }
+      @media (orientation: portrait) {
+        #navbar .dropMenu #dropButton:hover #menu {
+          transform: translateX(44.7vw);
+          opacity: 1; } }
+      @media (orientation: landscape) {
+        #navbar .dropMenu #dropButton:hover #menu {
+          transform: translateX(30vw);
+          opacity: 1; } }
   #navbar #logoHome {
     height: 100%;
     text-decoration: none;
@@ -305,11 +307,11 @@ textarea {
     justify-items: flex-start;
     align-items: center; }
     #navbar #logoHome img {
-      height: 8vh;
       width: auto;
+      height: 90%;
       transition: height 1s; }
       #navbar #logoHome img:hover {
-        height: 10vh;
+        height: 115%;
         width: auto; }
     #navbar #logoHome h1:hover {
       animation-name: hoveringText;
@@ -318,69 +320,51 @@ textarea {
       animation-timing-function: linear;
       animation-fill-mode: both; }
 
-@media (orientation: portrait) {
-  #navbar .dropMenu #dropButton #menu .sections #formasContacto li img {
-    height: auto;
-    width: 4vh; } }
+h6 {
+  color: #E8E9EB;
+  text-align: left;
+  font-weight: 400 !important;
+  font-size: 1.5rem !important; }
+
+@media (orientation: portrait) and (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem !important; }
+  h6 {
+    font-size: 1rem !important; } }
 
 @media (orientation: portrait) and (min-width: 576px) and (max-width: 768px) {
   #navbar {
     column-gap: 60vw; } }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 992px) {
-  #navbar .dropMenu #dropButton #menu {
+  #navbar #menu {
     top: 6.6vh; } }
 
 @media (orientation: portrait) and (min-width: 992px) and (max-width: 1200px) {
   #navbar {
     column-gap: 60vw; }
-    #navbar .dropMenu #dropButton:hover #menu {
+    #navbar #dropButton:hover #menu {
       transform: translateX(42.9vw); } }
 
 @media (orientation: portrait) and (min-width: 1200px) and (max-width: 1400px) {
   #navbar {
-    column-gap: 60vw; } }
+    column-gap: 60vw; }
+    #navbar h1 {
+      font-size: 5rem; } }
 
 @media (orientation: portrait) and (min-width: 1400px) {
   #navbar {
     column-gap: 60vw; }
-    #navbar .dropMenu #dropButton #menu {
-      width: 30vw;
-      left: -30vw; }
-    #navbar .dropMenu #dropButton:hover #menu {
-      transform: translateX(27.6vw); } }
+    #navbar h1 {
+      font-size: 5rem; }
+  h6 {
+    font-size: 3rem !important; } }
 
 @media (orientation: landscape) {
-  #navbar .dropMenu #dropButton #menu .sections #formasContacto li img {
-    width: auto;
-    height: 5vh; } }
-
-@media (orientation: landscape) and (min-width: 576px) and (max-width: 768px) {
-  #navbar {
-    column-gap: 60vw; } }
-
-@media (orientation: landscape) and (min-width: 768px) and (max-width: 992px) {
-  #navbar .dropMenu #dropButton #menu {
-    top: 6.6vh; } }
-
-@media (orientation: landscape) and (min-width: 992px) and (max-width: 1200px) {
-  #navbar {
-    column-gap: 60vw; }
-    #navbar .dropMenu #dropButton:hover #menu {
-      transform: translateX(42.9vw); } }
-
-@media (orientation: landscape) and (min-width: 1200px) and (max-width: 1400px) {
-  #navbar {
-    column-gap: 60vw; } }
-
-@media (orientation: landscape) and (min-width: 1400px) {
-  #navbar {
-    column-gap: 60vw; }
-    #navbar .dropMenu #dropButton #menu {
-      width: 28vw;
-      left: -30vw; }
-    #navbar .dropMenu #dropButton:hover #menu {
-      transform: translateX(27.6vw); } }
+  #navbar h1 {
+    font-size: 2rem; }
+  #navbar h6 {
+    font-size: 1rem !important; } }
 
 footer {
   padding: 0vh 1vw;
@@ -399,12 +383,14 @@ footer {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    font-weight: lighter;
     text-transform: uppercase;
     color: #240D05;
+    font-family: "Josefin Slab";
+    font-weight: 400;
     margin: 0px;
     padding: 0px;
-    column-gap: 1vw; }
+    column-gap: 1vw;
+    font-size: 0.8rem; }
   footer #copyright {
     grid-row: 1;
     grid-column: 1; }
@@ -415,18 +401,6 @@ footer {
     grid-row: 2;
     grid-column: 1 / span 2;
     font-size: 1rem; }
-
-@media (orientation: portrait) {
-  footer p {
-    font-size: 2.5vw !important; }
-  footer #slogan {
-    font-size: 3vw !important; } }
-
-@media (orientation: landscape) {
-  footer p {
-    font-size: 1.2vh !important; }
-  footer #slogan {
-    font-size: 1.7vh !important; } }
 
 @media (min-width: 576px) {
   footer {
@@ -452,77 +426,74 @@ footer {
         background-image: url(../Images/hero-02.png);
         background-position: center;
         background-size: 70%; } }
-  #mainIndex #info {
-    display: grid;
-    align-content: center; }
-    @media (orientation: portrait) {
-      #mainIndex #info {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
-        padding: 5vh 5vw;
-        row-gap: 10vh; } }
-    @media (orientation: landscape) {
-      #mainIndex #info {
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(2, 1fr);
-        column-gap: 5vw;
-        row-gap: 10vh; } }
-    #mainIndex #info div p {
-      font-style: italic;
-      text-align: center;
-      z-index: 1;
-      font-weight: 500; }
-    #mainIndex #info div iframe {
-      z-index: 1;
-      border-radius: 20px;
-      max-width: 35vw;
-      max-height: 50vw;
-      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
-    @media (orientation: portrait) {
-      #mainIndex #info #recipes {
-        grid-row: 1;
-        grid-column: 1; } }
-    @media (orientation: landscape) {
-      #mainIndex #info #recipes {
-        grid-row: 1;
-        grid-column: 1; }
-        #mainIndex #info #recipes div {
-          z-index: 1;
-          border-radius: 20px; } }
-    @media (orientation: portrait) {
-      #mainIndex #info #maps {
-        grid-row: 2;
-        grid-column: 1; }
-        #mainIndex #info #maps iframe {
-          min-height: 94.5%;
-          min-width: 100%; } }
-    @media (orientation: landscape) {
-      #mainIndex #info #maps {
-        grid-row: 1;
-        grid-column: 2;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center; }
-        #mainIndex #info #maps iframe {
-          min-height: 94.5%; } }
-    #mainIndex #info #videoCafe p {
-      text-align: justify; }
-    @media (orientation: portrait) {
-      #mainIndex #info #videoCafe {
-        grid-row: 3;
-        grid-column: 1;
-        height: auto; }
-        #mainIndex #info #videoCafe iframe {
-          min-width: 100%; } }
-    @media (orientation: landscape) {
-      #mainIndex #info #videoCafe {
-        grid-row: 2;
-        grid-column: 1 / span 2; }
-        #mainIndex #info #videoCafe p {
-          padding: 0vh 3vw; }
-        #mainIndex #info #videoCafe iframe {
-          height: 80%;
-          min-width: 100%; } }
+  @media (max-width: 992px) {
+    #mainIndex #info {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 5vh 5vw;
+      row-gap: 10vh; } }
+  @media (min-width: 992px) {
+    #mainIndex #info {
+      display: grid;
+      align-content: center;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 5vw;
+      row-gap: 10vh; } }
+  #mainIndex #info div p {
+    font-style: italic;
+    text-align: center;
+    z-index: 1;
+    font-weight: 500; }
+  #mainIndex #info div iframe {
+    z-index: 1;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+  @media (max-width: 992px) {
+    #mainIndex #info #recipes .carousel {
+      max-width: fit-content;
+      border-radius: 20px; }
+      #mainIndex #info #recipes .carousel img {
+        max-height: 80vh;
+        border-radius: 20px; } }
+  @media (min-width: 992px) {
+    #mainIndex #info #recipes {
+      grid-row: 1;
+      grid-column: 1; }
+      #mainIndex #info #recipes div {
+        z-index: 1;
+        border-radius: 20px; } }
+  @media (max-width: 992px) {
+    #mainIndex #info #maps iframe {
+      max-height: 90%;
+      max-width: 100%; } }
+  @media (min-width: 992px) {
+    #mainIndex #info #maps {
+      grid-row: 1;
+      grid-column: 2;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center; }
+      #mainIndex #info #maps iframe {
+        min-height: 94.5%; } }
+  #mainIndex #info #videoCafe p {
+    text-align: justify; }
+  @media (max-width: 992px) {
+    #mainIndex #info #videoCafe {
+      height: auto; }
+      #mainIndex #info #videoCafe iframe {
+        max-height: 90%;
+        max-width: 100%; } }
+  @media (min-width: 992px) {
+    #mainIndex #info #videoCafe {
+      grid-row: 2;
+      grid-column: 1 / span 2; }
+      #mainIndex #info #videoCafe p {
+        padding: 0vh 3vw; }
+      #mainIndex #info #videoCafe iframe {
+        height: 80%;
+        min-width: 100%; } }
 
 #mainCafe {
   display: flex;
@@ -532,14 +503,7 @@ footer {
   #mainCafe h1 {
     color: #240D05;
     margin: 5vh 0vw;
-    font-weight: normal;
-    text-align: left !important; }
-    @media (orientation: portrait) {
-      #mainCafe h1 {
-        font-size: 10vw !important; } }
-    @media (orientation: landscape) {
-      #mainCafe h1 {
-        font-size: 10vh !important; } }
+    font-weight: normal !important; }
   #mainCafe h3 {
     width: 100%;
     text-align: left !important; }
@@ -576,7 +540,17 @@ footer {
         width: 55%;
         height: 40vh; }
         #mainCafe #barista .carousel img {
-          margin-top: -350px; } }
+          margin-top: -350px; }
+      #mainCafe #toasting .carousel-caption {
+        padding: 1vh 0vw;
+        width: 100%;
+        height: 20%;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        background-color: white; }
+        #mainCafe #toasting .carousel-caption p {
+          text-align: center !important; } }
   @media (orientation: landscape) {
     #mainCafe {
       row-gap: 5vh; }
@@ -629,11 +603,15 @@ footer {
     @media (orientation: landscape) and (min-width: 768px) {
       #mainCafe #drying {
         flex-flow: row wrap;
+        align-items: flex-start;
         column-gap: 5vw; }
         #mainCafe #drying p {
           width: 100%; }
         #mainCafe #drying ul {
+          margin-top: 2vh;
           width: 50%; }
+          #mainCafe #drying ul li {
+            margin-bottom: 5vh; }
         #mainCafe #drying div {
           width: 40%; }
           #mainCafe #drying div .container {
@@ -661,9 +639,24 @@ footer {
           grid-row: 2;
           grid-column: 1; }
         #mainCafe #toasting .carousel {
-          margin-top: -4vh;
+          margin: -30% 20% 5% 20% !important;
           grid-row: 2;
-          grid-column: 2; }
+          grid-column: 2;
+          margin-top: -10vh;
+          filter: grayscale(100%);
+          transition: filter 1s !important; }
+          #mainCafe #toasting .carousel:hover {
+            filter: grayscale(0%); }
+          #mainCafe #toasting .carousel .carousel-caption {
+            padding: 1vh 0vw;
+            width: 100%;
+            height: 20%;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            background-color: white; }
+            #mainCafe #toasting .carousel .carousel-caption p {
+              text-align: center !important; }
         #mainCafe #toasting #p2 {
           grid-row: 3;
           grid-column: 1 / span 2; } }
@@ -707,13 +700,8 @@ footer {
     color: #240D05;
     font-family: 'Neonderthaw' !important;
     font-weight: normal;
-    text-align: center !important; }
-    @media (orientation: portrait) {
-      #mainCarta h1 {
-        font-size: 20vw !important; } }
-    @media (orientation: landscape) {
-      #mainCarta h1 {
-        font-size: 10vh !important; } }
+    text-align: center !important;
+    font-size: 5rem !important; }
   #mainCarta .titles {
     height: 30vh;
     border-top: 0.15vh solid #000000;
@@ -723,14 +711,10 @@ footer {
     background-repeat: no-repeat; }
     @media (orientation: portrait) {
       #mainCarta .titles {
-        background-size: cover; }
-        #mainCarta .titles h3 {
-          font-size: 15vw !important; } }
+        background-size: cover; } }
     @media (orientation: landscape) {
       #mainCarta .titles {
-        background-size: contain; }
-        #mainCarta .titles h3 {
-          font-size: 8vh !important; } }
+        background-size: contain; } }
     @media (min-width: 768px) {
       #mainCarta .titles {
         border: 0.15vh solid #240D05;
@@ -741,7 +725,8 @@ footer {
       padding-right: 2vw;
       text-align: right;
       font-family: 'Neonderthaw' !important;
-      font-weight: normal; }
+      font-weight: normal;
+      font-size: 4rem !important; }
   @media (orientation: landscape) {
     #mainCarta #titleCoffee {
       background-image: url(../Images/MenuCoffee2.png); } }
@@ -772,13 +757,8 @@ footer {
       background-position: bottom; } }
   #mainCarta .footNotes {
     font-weight: lighter;
-    text-align: justify; }
-  @media (orientation: portrait) {
-    #mainCarta .footNotes {
-      font-size: 2vw; } }
-  @media (orientation: landscape) {
-    #mainCarta .footNotes {
-      font-size: 2vh; } }
+    text-align: justify;
+    font-size: 0.9rem; }
   #mainCarta .prices {
     text-align: right; }
 
@@ -792,12 +772,6 @@ footer {
     color: #240D05;
     font-weight: normal;
     margin: 5vh 0vw; }
-    @media (orientation: portrait) {
-      #mainSuscription h1 {
-        font-size: 10vw !important; } }
-    @media (orientation: landscape) {
-      #mainSuscription h1 {
-        font-size: 10vh !important; } }
   #mainSuscription p {
     text-align: justify; }
   #mainSuscription #adress {
@@ -819,12 +793,6 @@ footer {
     color: #240D05;
     font-weight: normal;
     margin: 5vh 0vw; }
-    @media (orientation: portrait) {
-      #mainContacto h1 {
-        font-size: 10vw !important; } }
-    @media (orientation: landscape) {
-      #mainContacto h1 {
-        font-size: 10vh !important; } }
   #mainContacto p {
     text-align: justify; }
   #mainContacto fieldset {

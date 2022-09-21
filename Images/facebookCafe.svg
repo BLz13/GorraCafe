@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375"
+   version="1.1"
+   id="svg155"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="facebookCafe.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview157"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.78127806"
+     inkscape:cx="154.87444"
+     inkscape:cy="254.71085"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs152" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 79.374999,39.929343 C 79.374999,17.877424 61.606513,0 39.687381,0 17.768724,0 0,17.877424 0,39.929343 0,59.860658 14.51305,76.377558 33.486517,79.374999 V 51.47116 H 23.409252 V 39.929343 h 10.077265 v -8.796941 c 0,-10.007354 5.924723,-15.535226 14.990494,-15.535226 4.342239,0 8.883888,0.781527 8.883888,0.781527 v 9.82627 h -5.00441 c -4.930283,0 -6.467533,3.076069 -6.467533,6.235534 v 7.488836 H 56.895769 L 55.136138,51.47116 H 45.888956 V 79.374999 C 64.861949,76.377558 79.374999,59.860658 79.374999,39.929343"
+       style="display:inline;fill:#361307;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0237548"
+       id="path68"
+       inkscape:export-filename="..\Images\FacebookCafe.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:label="EC" />
+    <path
+       d="M 55.633422,51.105738 57.466018,39.645863 H 46.002556 v -7.435669 c 0,-3.137034 1.60099,-6.191265 6.73571,-6.191265 h 5.212166 v -9.756507 c 0,0 -4.730216,-0.775979 -9.252508,-0.775979 -9.441441,0 -15.612082,5.488627 -15.612082,15.424933 v 8.734487 H 22.590967 v 11.459875 h 10.494875 v 27.705734 c 2.104402,0.314649 4.261093,0.480255 6.458232,0.480255 2.197142,0 4.35408,-0.165606 6.458482,-0.480255 V 51.105738 h 9.630866"
+       style="display:inline;fill:#e9eaec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0241561"
+       id="path70"
+       inkscape:label="EvilCorp"
+       inkscape:export-filename="..\Images\FacebookCafe.png"
+       inkscape:export-xdpi="56.283733"
+       inkscape:export-ydpi="56.283733" />
+  </g>
+</svg>
