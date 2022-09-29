@@ -467,23 +467,17 @@ footer {
     @media (max-width: 992px) {
       #mainIndex #info #indexStuff #recipes {
         width: 90%; }
-        #mainIndex #info #indexStuff #recipes .carousel {
-          border-radius: 20px; }
-          #mainIndex #info #indexStuff #recipes .carousel img {
-            width: 100%;
-            height: auto; } }
+        #mainIndex #info #indexStuff #recipes .carousel img {
+          width: 100%;
+          height: auto; } }
     @media (min-width: 992px) {
-      #mainIndex #info #indexStuff {
+      #mainIndex #info #indexStuff #recipes {
         grid-row: 1;
         grid-column: 1; }
-        #mainIndex #info #indexStuff #recipes {
-          max-height: 80%; }
-          #mainIndex #info #indexStuff #recipes .carousel {
-            border-radius: 20px; }
-            #mainIndex #info #indexStuff #recipes .carousel .carousel-inner {
-              max-width: 30vw !important;
-              height: auto;
-              border-radius: 20px; } }
+        #mainIndex #info #indexStuff #recipes .carousel {
+          border-radius: 20px; }
+          #mainIndex #info #indexStuff #recipes .carousel .carousel-inner {
+            width: 22vw !important; } }
   @media (max-width: 992px) {
     #mainIndex #info #maps {
       margin-top: 10vh; }

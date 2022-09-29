@@ -72,31 +72,25 @@
                     text-decoration: none;
                 }
             }
-            @media (max-width: 992px){
-                #recipes{
+            #recipes{
+                @media (max-width: 992px){
                     width: 90%;
                     .carousel{
-                        border-radius: 20px;
                         img{
                             width: 100%;
                             height: auto;
                         }
                     }
-                }    
-            }
-            @media (min-width: 992px){
-                grid-row: 1;
-                grid-column: 1;
-                #recipes{
-                    max-height: 80%;
+                }
+                @media (min-width: 992px){
+                    grid-row: 1;
+                    grid-column: 1;
                     .carousel{
                         border-radius: 20px;
                         .carousel-inner{
-                            max-width: 30vw !important;
-                            height: auto;
-                            border-radius: 20px;
+                            width: 22vw !important;
                         }
-                    }
+                    }  
                 }
             }
         }
