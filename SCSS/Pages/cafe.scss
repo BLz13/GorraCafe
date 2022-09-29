@@ -20,11 +20,11 @@
         text-align: left !important;
     }
     p{
-        text-align: justify;
+        text-align: left;
     }
     li{
         list-style: none;
-        text-align: justify !important;
+        text-align: left !important;
     }
     @include flex-column-evenly-center;
     @media (orientation: portrait){
@@ -74,7 +74,6 @@
             }
         }
     }
-    
     @media (orientation: landscape){
         row-gap: 5vh;
         #us{

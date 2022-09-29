@@ -74,11 +74,12 @@
             }
             @media (max-width: 992px){
                 #recipes{
+                    width: 90%;
                     .carousel{
                         border-radius: 20px;
                         img{
-                            max-height: 80vh;
-                            border-radius: 20px;
+                            width: 100%;
+                            height: auto;
                         }
                     }
                 }    
@@ -90,8 +91,9 @@
                     max-height: 80%;
                     .carousel{
                         border-radius: 20px;
-                        img{
-                            max-height: 80vh;
+                        .carousel-inner{
+                            max-width: 30vw !important;
+                            height: auto;
                             border-radius: 20px;
                         }
                     }
