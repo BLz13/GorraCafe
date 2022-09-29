@@ -29,7 +29,6 @@
             background-color: rgba(255, 255, 255, 0);
             border: none;
             #menu {
-                z-index: 2;
                 @media (orientation: landscape){
                     width: 30vw;
                     left: -32vw;
@@ -37,6 +36,7 @@
                 @media (orientation: portrait){
                     width: 45vw;
                     left: -47vw;
+                    top: 194%;
                 }
                 top: 185%;
                 height: 95vh;
@@ -158,10 +158,6 @@ h6{
 @media (orientation: portrait){
 
     @media (max-width: 576px){
-    
-        h1{
-            font-size: 1.5rem !important;
-        }
         
         h6{
             font-size: 1rem !important;
@@ -203,9 +199,6 @@ h6{
 
         #navbar {
             column-gap: 60vw;
-            h1{
-                font-size: 5rem;
-            }
         }
 
     }
@@ -214,13 +207,9 @@ h6{
 
         #navbar {
             column-gap: 60vw;
-            h1{
-                font-size: 5rem;
-            }
         }
 
         h6{
-            
             font-size: 3rem !important; 
         }
         
@@ -239,15 +228,5 @@ h6{
             font-size: 1rem !important;
         }
     }
-
-    @media (min-width: 576px) and (max-width: 768px){}
-
-    @media (min-width: 768px) and (max-width: 992px){}
-
-    @media (min-width: 992px) and (max-width: 1200px){}
-
-    @media (min-width: 1200px) and (max-width: 1400px){}
-
-    @media (min-width: 1400px){}
 
 }

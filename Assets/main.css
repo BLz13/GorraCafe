@@ -44,7 +44,7 @@ main {
   color: #E8E9EB;
   text-align: right;
   text-transform: capitalize;
-  font-size: 2.5rem; }
+  font-size: 2rem; }
 
 .secondaryTitle:hover {
   animation-name: hoveringText;
@@ -224,7 +224,6 @@ textarea {
       background-color: rgba(255, 255, 255, 0);
       border: none; }
       #navbar .dropMenu #dropButton #menu {
-        z-index: 2;
         top: 185%;
         height: 95vh;
         opacity: 0;
@@ -244,7 +243,8 @@ textarea {
         @media (orientation: portrait) {
           #navbar .dropMenu #dropButton #menu {
             width: 45vw;
-            left: -47vw; } }
+            left: -47vw;
+            top: 194%; } }
         @media (min-width: 1400px) and (orientation: landscape) {
           #navbar .dropMenu #dropButton #menu {
             top: -92%;
@@ -327,8 +327,6 @@ h6 {
   font-size: 1.5rem !important; }
 
 @media (orientation: portrait) and (max-width: 576px) {
-  h1 {
-    font-size: 1.5rem !important; }
   h6 {
     font-size: 1rem !important; } }
 
@@ -348,15 +346,11 @@ h6 {
 
 @media (orientation: portrait) and (min-width: 1200px) and (max-width: 1400px) {
   #navbar {
-    column-gap: 60vw; }
-    #navbar h1 {
-      font-size: 5rem; } }
+    column-gap: 60vw; } }
 
 @media (orientation: portrait) and (min-width: 1400px) {
   #navbar {
     column-gap: 60vw; }
-    #navbar h1 {
-      font-size: 5rem; }
   h6 {
     font-size: 3rem !important; } }
 
@@ -432,7 +426,7 @@ footer {
       flex-flow: column nowrap;
       align-items: center;
       padding: 5vh 5vw;
-      row-gap: 10vh; } }
+      row-gap: 5vh; } }
   @media (min-width: 992px) {
     #mainIndex #info {
       display: grid;
@@ -440,7 +434,7 @@ footer {
       grid-template-columns: repeat(2, auto);
       grid-template-rows: repeat(2, 1fr);
       column-gap: 5vw;
-      row-gap: 10vh; } }
+      row-gap: 15vh; } }
   #mainIndex #info div p {
     font-style: italic;
     text-align: center;
@@ -450,31 +444,54 @@ footer {
     z-index: 1;
     border-radius: 20px;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
-  @media (max-width: 992px) {
-    #mainIndex #info #recipes .carousel {
-      max-width: fit-content;
+  #mainIndex #info #indexStuff {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 2%; }
+    #mainIndex #info #indexStuff .buttons {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      background-color: #D19C1D;
+      min-height: 5%;
       border-radius: 20px; }
-      #mainIndex #info #recipes .carousel img {
-        max-height: 80vh;
-        border-radius: 20px; } }
-  @media (min-width: 992px) {
-    #mainIndex #info #recipes {
-      grid-row: 1;
-      grid-column: 1; }
-      #mainIndex #info #recipes div {
-        z-index: 1;
-        border-radius: 20px; } }
+      #mainIndex #info #indexStuff .buttons a {
+        text-transform: capitalize;
+        text-decoration: none; }
+        #mainIndex #info #indexStuff .buttons a p {
+          color: #E8E9EB;
+          margin: 0px; }
+    @media (max-width: 992px) {
+      #mainIndex #info #indexStuff #recipes .carousel {
+        border-radius: 20px; }
+        #mainIndex #info #indexStuff #recipes .carousel img {
+          max-height: 80vh;
+          border-radius: 20px; } }
+    @media (min-width: 992px) {
+      #mainIndex #info #indexStuff {
+        grid-row: 1;
+        grid-column: 1; }
+        #mainIndex #info #indexStuff #recipes {
+          max-height: 80%; }
+          #mainIndex #info #indexStuff #recipes .carousel {
+            border-radius: 20px; }
+            #mainIndex #info #indexStuff #recipes .carousel img {
+              max-height: 80vh;
+              border-radius: 20px; } }
   @media (max-width: 992px) {
-    #mainIndex #info #maps iframe {
-      max-height: 90%;
-      max-width: 100%; } }
+    #mainIndex #info #maps {
+      margin-top: 10vh; }
+      #mainIndex #info #maps iframe {
+        max-height: 90%;
+        max-width: 100%; } }
   @media (min-width: 992px) {
     #mainIndex #info #maps {
       grid-row: 1;
       grid-column: 2;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center; }
+      height: 110%; }
       #mainIndex #info #maps iframe {
         min-height: 94.5%; } }
   #mainIndex #info #videoCafe p {
